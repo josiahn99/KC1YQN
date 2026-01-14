@@ -1,69 +1,60 @@
-* {
-  box-sizing: border-box;
-}
-
+/* Global page setup */
 body {
-  margin: 0;
-  font-family: system-ui, sans-serif;
-  background: #0e0e0e;
-  color: #eaeaea;
-  text-align: center;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.4;
+    background-color: #fff;
+    color: #000;
+    margin: 0;
+    padding: 0;
 }
 
-header {
-  padding: 1.5rem 1rem;
+/* Links: simple blue underlined */
+a {
+    color: #0000EE;
+    text-decoration: underline;
 }
 
-.grid {
-  display: grid;
-  gap: 1rem;
-  padding: 1rem;
+/* Headings: plain and minimal */
+h1, h2, h3 {
+    font-weight: normal;
+    margin: 10px 0;
 }
 
-.card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  aspect-ratio: 1 / 1;
-  background: #1a1a1a;
-  border-radius: 12px;
-  text-decoration: none;
-  color: #eaeaea;
-  font-size: 1.2rem;
+/* Main content container */
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
 }
 
-.card:hover {
-  background: #252525;
+/* Boxes: simple black border, plain background */
+.box {
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #fff;
 }
 
-.content {
-  padding: 1rem;
+/* Lists or tables inside boxes */
+ul, ol {
+    padding-left: 20px;
+    margin: 0 0 10px 0;
 }
 
-footer {
-  padding: 1.5rem 1rem;
-  font-size: 0.85rem;
-  color: #aaa;
+table {
+    border-collapse: collapse;
+    width: 100%;
 }
 
-.back {
-  display: block;
-  margin-bottom: 0.5rem;
-  color: #6cf;
-  text-decoration: none;
+td, th {
+    border: 1px solid #000;
+    padding: 4px;
 }
 
-@media (min-width: 600px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 600px;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width: 900px) {
-  .grid {
-    grid-template-columns: repeat(4, 1fr);
-    max-width: 900px;
-  }
+/* Responsive tweak for small screens */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+    }
 }
