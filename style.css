@@ -3,10 +3,10 @@ body {
     font-family: 'Courier New', monospace;
     font-size: 14px;
     line-height: 1.4;
-    background-color: #fff;
-    color: #000;
+    background-color: #181818;
+    color: #e4e4e4;
     margin: 0;
-    padding: 0;
+    padding: 3;
 }
 
 /* Links: simple blue underlined */
