@@ -33,7 +33,7 @@ h1, h2, h3 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 0.25rem;
-  row-gap: 0.5;
+  row-gap: 0.25rem;
 }
 
 /* Boxes: simple black border, plain background */
