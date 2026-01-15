@@ -29,6 +29,12 @@ h1, h2, h3 {
     margin: 30px auto;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
 /* Boxes: simple black border, plain background */
 .box {
     border: 1px solid #000;
