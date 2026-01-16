@@ -30,10 +30,10 @@ h1, h2, h3 {
 }
 
 .grid {
-  display: inline-grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 0.25rem;
-  row-gap: 0.25rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0.25rem;
+  justify-content: start;
 }
 
 /* Boxes: simple black border, plain background */
