@@ -32,9 +32,9 @@ h1, h2, h3 {
 .grid {
   display: grid;
   grid-template-columns: auto auto;
-  gap: 2rem;
+  gap: 5rem;
   justify-content: start;
-  column-gap: 0.25rem
+  column-gap: 0.25rem;
 }
 
 /* Boxes: simple black border, plain background */
