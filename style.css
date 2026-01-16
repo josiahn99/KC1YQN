@@ -24,8 +24,8 @@ h1, h2, h3 {
 
 /* Main content container */
 .container {
-    width: 90%;
-    max-width: 800px;
+    width: 80%
+    max-width: 500px;
     margin: 30px auto;
 }
 
