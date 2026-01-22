@@ -132,4 +132,31 @@ td, th {
     .container {
         width: 95%;
     }
+}/* Header styling */
+header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;       /* spacing between logo and text */
+  margin-bottom: 2rem;
+}
+
+.header-logo {
+  height: 40px;       /* adjust as needed */
+  width: auto;
+  opacity: 0.75;      /* subtle presence */
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Hover effect for logo */
+.header-logo:hover {
+  opacity: 1;
+}
+
+/* Optional: ensure header text stays same style */
+header h1 {
+  font-size: 2rem;    /* or whatever matches your design */
+  font-weight: normal;
+  color: #90D5FF;
+  text-transform: lowercase;  /* consistent with your notes page */
+  margin: 0;
 }
