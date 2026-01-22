@@ -157,6 +157,5 @@ header h1 {
   font-size: 2rem;    /* or whatever matches your design */
   font-weight: normal;
   color: #90D5FF;
-  text-transform: lowercase;  /* consistent with your notes page */
   margin: 0;
 }
