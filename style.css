@@ -1,80 +1,37 @@
-/* Global pagesss setup */
-body {
-    font-family: 'Inter';
-    font-size: 17px;
-    line-height: 1.55;
-    background-color: #121212;
-    color: #e0e0e0;
-    margin: 0;
-    padding: 20px;
-}
-
-/* Links: simple blue underlined */
-a {
-    color: #58A6FF;
-    text-decoration: underline;
-}
-
-/* Headings: plain and minimal */
-h1, h2, h3 {
-    font-weight: normal;
-    margin: 10px 0;
-    color: #90D5FF;
-}
-
+/* Log entry style */
 .log-entry {
-  padding-left: 1.25rem;
-  margin: 2.5rem 0;
-  border-left: 2px solid rgba(255, 255, 255, 0.25);
+    padding: 1rem 1.25rem;
+    margin: 2rem 0;
+    border-left: 3px solid rgba(144, 213, 255, 0.5); /* subtle notebook margin */
+    background-color: rgba(20, 20, 20, 0.6); /* slightly lighter than background */
+    border-radius: 4px;
+    line-height: 1.6;
+    position: relative;
 }
 
-/* Main content container */
-.container {
-    width: 80%;
-    max-width: 500px;
-    margin: 30px auto;
+/* Date / meta styling */
+.log-entry .date {
+    font-size: 0.9rem;
+    color: #a0c4ff;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+    display: block;
 }
 
-.grid {
-  display: inline-grid;
-  grid-template-columns: max-content max-content;
-  column-gap: 3rem;
-  row-gap: 0.25rem;
+/* Optional: small divider for long entries */
+.log-entry hr {
+    border: 0;
+    border-top: 1px dashed rgba(144, 213, 255, 0.3);
+    margin: 1rem 0;
 }
 
-.grid a {
-  padding: 0;
-  margin: 0;
-  white-space: nowrap;
+/* Optional: subtle indentation for nested lists inside logs */
+.log-entry ul,
+.log-entry ol {
+    margin-left: 1rem;
 }
 
-/* Boxes: simple black border, plain background */
-.box {
-    border: 1px solid #000;
-    padding: 10px;
-    margin: 10px 0;
-    background-color: #fff;
-}
-
-/* Lists or tables inside boxes */
-ul, ol {
-    padding-left: 20px;
-    margin: 0 0 10px 0;
-}
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-td, th {
-    border: 1px solid #000;
-    padding: 4px;
-}
-
-/* Responsive tweak for small screens */
-@media (max-width: 600px) {
-    .container {
-        width: 95%;
-    }
+/* Optional: highlight key terms */
+.log-entry strong {
+    color: #ffffff;
 }
