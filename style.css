@@ -1,15 +1,62 @@
+/* Global pages setup */
+body {
+    font-family: 'Inter';
+    font-size: 17px;
+    line-height: 1.55;
+    background-color: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Links: simple blue underlined */
+a {
+    color: #58A6FF;
+    text-decoration: underline;
+}
+
+/* Headings: field-note style */
+h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #a0c4ff; /* soft notebook-blue */
+    border-bottom: 1px dashed rgba(160, 196, 255, 0.5); /* page divider style */
+    padding-bottom: 0.3rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-transform: none; /* lowercase friendly */
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #90d5ff;
+    border-left: 3px solid rgba(144, 213, 255, 0.4); /* subtle margin note */
+    padding-left: 0.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #80c5ff;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
 /* Log entry style */
 .log-entry {
     padding: 1rem 1.25rem;
     margin: 2rem 0;
-    border-left: 3px solid rgba(144, 213, 255, 0.5); /* subtle notebook margin */
-    background-color: rgba(20, 20, 20, 0.6); /* slightly lighter than background */
+    border-left: 3px solid rgba(144, 213, 255, 0.5);
+    background-color: rgba(20, 20, 20, 0.6);
     border-radius: 4px;
     line-height: 1.6;
     position: relative;
 }
 
-/* Date / meta styling */
+/* Date / meta styling inside log entries */
 .log-entry .date {
     font-size: 0.9rem;
     color: #a0c4ff;
@@ -18,20 +65,71 @@
     display: block;
 }
 
-/* Optional: small divider for long entries */
+/* Optional divider for long entries */
 .log-entry hr {
     border: 0;
     border-top: 1px dashed rgba(144, 213, 255, 0.3);
     margin: 1rem 0;
 }
 
-/* Optional: subtle indentation for nested lists inside logs */
+/* Indentation for lists inside log entries */
 .log-entry ul,
 .log-entry ol {
     margin-left: 1rem;
 }
 
-/* Optional: highlight key terms */
+/* Highlight key terms */
 .log-entry strong {
     color: #ffffff;
+}
+
+/* Main content container */
+.container {
+    width: 80%;
+    max-width: 500px;
+    margin: 30px auto;
+}
+
+.grid {
+    display: inline-grid;
+    grid-template-columns: max-content max-content;
+    column-gap: 3rem;
+    row-gap: 0.25rem;
+}
+
+.grid a {
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* Boxes: simple black border, plain background */
+.box {
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #fff;
+}
+
+/* Lists or tables inside boxes */
+ul, ol {
+    padding-left: 20px;
+    margin: 0 0 10px 0;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #000;
+    padding: 4px;
+}
+
+/* Responsive tweak for small screens */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+    }
 }
