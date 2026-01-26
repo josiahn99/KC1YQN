@@ -72,6 +72,96 @@
       <p>Listened to the nightly NJ statewide linked net on the Alpine, NJ repeater (~13 miles). Reception was dramatically better with the Slim Jim clipped to a window hanger than with the Signal Stick.</p>
       <p>Alpine was full quieting, and I even received a 33 from a wide-area repeater ~50 miles south on 147.375 MHz, despite operating from a north-facing window.</p>
       <p>The Slim Jim is clearly the best non-permanent antenna solution—portable, effective, and easy to deploy anywhere.</p>
+      
+        <section class="log-entry">
+    <h3>January 22, 2026 — Boston</h3>
+    <p>Brought the radio to work today to see if the issue with the Prudential repeater was just signal strength or something I was doing wrong digitally. Turns out it was the talk group—I had the wrong number in there. The repeater’s parrot talk group is different from BrandMeister’s.</p>
+    <p>Now I can test it from home without other factors interfering.</p>
+    <p>Also tried to get APRS transmitting to work, but the first attempt didn’t succeed. Not sure yet what went wrong.</p>
+  </section>
+
+  <section class="log-entry">
+    <h3>January 23–25, 2026 — Southern New England</h3>
+    <p>Revised my codeplug after learning to use RepeaterBook by distance instead of by state, which immediately revealed Rhode Island repeaters I’d been missing. A major snowstorm activated Skywarn nets and increased general activity, giving me a great chance to test receive performance on the AT-D878 with both repeaters and my hotspot.</p>
+    <p>I added more repeaters, including some farther-out systems, plus additional BrandMeister talkgroups. Mt. Washington isn’t common, but under the right tropo conditions it’s not impossible.</p>
+    <p>After a couple hours of troubleshooting, I finally received a digital repeater reliably—oddly requiring squelch to be fully open. The radio shows when it’s receiving, but identifying the talkgroup isn’t always obvious unless you’re on the correct time slot. This is especially confusing in southern New England, where many repeaters carry overlapping regional talkgroups. I also realized I’d forgotten to program TG 9 for local traffic.</p>
+
+    <p><strong>Key takeaways:</strong></p>
+    <ul>
+      <li>On a hotspot, TG 4000 must be keyed to disconnect before switching talkgroups (or wait for timeout).</li>
+      <li>The 878 will play both A and B VFOs unless explicitly disabled, which can make Worldwide dominate.</li>
+      <li>DMR Monitor (“promiscuous mode”) is powerful for discovery and debugging but can make scanning feel broken if left on.</li>
+    </ul>
+
+    <p>Overall, a few focused hours cleared up a lot of confusion and made the radio feel predictable again.</p>
+    <p>Using only a handheld with a Signal Stick on 2 m, I was able to consistently receive repeaters 15–30 miles away indoors, with best results on the second floor and when oriented toward the repeater. Several systems came in clearly despite modest signal reports, showing that placement and orientation mattered as much as distance. Skywarn activity and increased net traffic made it much easier to identify active repeaters and confirm reliable coverage across southern New England.</p>
+  </section>
+
+  <section class="reception-log log-entry">
+    <h3>Reception Log — Southern New England</h3>
+    <p><strong>Antenna:</strong> Signal Stick (handheld)</p>
+
+    <section class="reception-entry">
+      <strong>January 23 — Southborough, MA (~11:00 AM)</strong>
+      <ul>
+        <li>Band: 2 m | Mode: DMR (Skywarn TG) | Distance: ~20 mi | Signal: S5</li>
+        <li>Notes: Skywarn talkgroup identified itself even though it was not explicitly programmed.</li>
+      </ul>
+    </section>
+
+    <section class="reception-entry">
+      <strong>January 23 — West Bridgewater, MA (11:25 AM)</strong>
+      <ul>
+        <li>Callsign: N1ZHG | Band: 2 m | Mode: Analog FM | Distance: ~28 mi | Signal: S4</li>
+        <li>Location: 1st floor, dining room</li>
+        <li>Notes: Stable, moderate indoor signal.</li>
+      </ul>
+    </section>
+
+    <section class="reception-entry">
+      <strong>January 23 — Cumberland, RI (11:45 AM)</strong>
+      <ul>
+        <li>Callsign: NB1RI | Frequency: 145.170 MHz | Band: 2 m | Mode: Analog FM | Distance: ~14 mi | Signal: S3–S4</li>
+        <li>Location: 2nd floor facing west; also workable from 1st-floor bedroom window facing north</li>
+        <li>Notes: Best reception when oriented west.</li>
+      </ul>
+    </section>
+
+    <section class="reception-entry">
+      <strong>January 23 — North Providence, RI (Skywarn) (12:00 PM)</strong>
+      <ul>
+        <li>Callsign: NB1RI | Frequency: 145.350 MHz | Band: 2 m | Mode: Analog FM | Distance: ~18 mi | Signal: S6</li>
+        <li>Location: 2nd floor near windows</li>
+        <li>Notes: Clear audio; strong indoor copy.</li>
+      </ul>
+    </section>
+
+    <section class="reception-entry">
+      <strong>January 23 — Mendon, MA (12:09 PM)</strong>
+      <ul>
+        <li>Band: 2 m | Mode: Analog FM | Distance: ~12 mi | Signal: S3</li>
+        <li>Location: Indoor</li>
+        <li>Notes: Brief but readable.</li>
+      </ul>
+    </section>
+
+    <section class="reception-entry">
+      <strong>January 23 — Paxton, MA (7:45 PM)</strong>
+      <ul>
+        <li>Band: 2 m | Mode: Analog FM | Distance: ~40 mi | Signal: S5–S9</li>
+        <li>Location: 2nd floor, not near a window</li>
+        <li>Notes: Elmers Old Timers Net; strong reception for distance with handheld antenna.</li>
+      </ul>
+    </section>
+
+    <section class="reception-entry">
+      <strong>January 23 — Bridgewater, MA (7:10 PM)</strong>
+      <ul>
+        <li>Callsign: W1MV | Band: 2 m | Mode: Analog FM | Distance: ~22 mi | Signal: S4</li>
+        <li>Location: Indoor</li>
+        <li>Notes: Usable evening reception.</li>
+      </ul>
+      
     </section>
   </main>
 
