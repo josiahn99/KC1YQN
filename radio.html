@@ -9,53 +9,138 @@
 <body>
   <main class="container">
   <header><h1>Anytone 878 UVII Plus</h1></header>
- As a first radio, the AT-D878 has been a great fit. It’s feature-rich, supporting analog FM, DMR, APRS, and GPS in one handheld, which makes it easy to experiment with different parts of the hobby right away. The depth of features means it grows with you instead of being outgrown after a few months. <strong>These are some tips from my experience for anyone getting started.</strong></p>
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anytone AT-D878UVII Plus</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    color: #222;
+  }
+  h2, h3 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    color: #00529B;
+  }
+  ul {
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    padding-left: 20px;
+  }
+  strong {
+    color: #222;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.5em 0 1em 0;
+  }
+  th, td {
+    border: 1px solid #ccc;
+    padding: 6px 10px;
+    text-align: left;
+  }
+  th {
+    background: #e0e0e0;
+  }
+  tr:nth-child(even) {
+    background: #f5f5f5;
+  }
+  details {
+    margin-bottom: 1em;
+    padding: 0.5em 1em;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  summary {
+    font-weight: bold;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<h2>Anytone AT-D878UVII Plus</h2>
+<p>The AT-D878 is a solid first radio. It supports <strong>analog FM</strong>, <strong>DMR</strong>, <strong>APRS</strong>, and <strong>GPS</strong>, making it easy to explore different parts of the hobby. The features grow with you instead of being outgrown quickly. <strong>These are some tips from my experience for anyone getting started.</strong></p>
 
 <h3>First Steps Before Programming</h3>
-<p>Codeplugs can be a little overwhelming at first, which is why some people go the route of a cheap analog radio first—and that’s totally valid. There’s a lot of flexibility here, and the depth can be intimidating until you start experimenting.</p>
+<p>Codeplugs can be intimidating, which is why some start with a simple analog radio—totally valid. Here’s a low-pressure way to get your bearings:</p>
 
 <ul>
-  <li><strong>Just listen first:</strong> When you first open the box, the best approach is simple: <strong>just listen</strong>. Don’t worry about digital features yet—make sure the radio is in <strong>analog mode</strong>, turn down the <strong>squelch</strong>, and scan around by holding the up or down arrow on the center circle. This lets you get a feel for what signals are active, what repeaters are nearby, and how your location and antenna affect reception.</li>
-  <li><strong>Try manual programming:</strong> Before connecting to a computer, enter a few basic analog repeaters from the keypad. Yes, the interface feels like a phone from 2003, but being able to make quick adjustments or add repeaters manually is valuable. Doing it by hand also reinforces test concepts like <strong>TX/RX offsets and PL tones</strong>.</li>
-  <li><strong>Get a feel for the radio:</strong> Don’t worry if you hear nothing at times, or if the rubber duck seems limited. With a <strong>Signal Stick</strong>, staying vertical and near a window makes a huge difference. This is a low-pressure way to understand how the radio behaves before diving into a full codeplug.</li>
+  <li><strong>Just listen:</strong> Open the box, set analog mode, lower the squelch, and scan with the up/down arrow. Focus on what’s active and how location/antenna affects reception.</li>
+  <li><strong>Manual programming:</strong> Enter a few analog repeaters via the keypad. The interface feels old-school, but quick adjustments without a computer are useful and reinforce <strong>TX/RX offsets</strong> and <strong>PL tones</strong>.</li>
+  <li><strong>Get a feel:</strong> Don’t worry if the rubber duck is limited. With a <strong>Signal Stick</strong>, staying vertical and near a window makes a big difference.</li>
 </ul>
 
-<h3>Codeplug</h3>
-<p>Once you’re comfortable scanning and entering a few repeaters manually, you can start organizing your codeplug. Think of <strong>FM repeaters, DMR repeaters, and hotspots as separate categories</strong>, since each has its own characteristics and planning approach.</p>
+<details>
+  <summary>Codeplug</summary>
+  <p>Once comfortable scanning and entering repeaters, organize your codeplug. Keep <strong>FM repeaters, DMR repeaters, and hotspots</strong> separate, since each behaves differently.</p>
 
-<ul>
-  <li><strong>FM repeaters:</strong> Great for local analog contacts and casual scanning. Use <strong>RepeaterBook</strong> to find wide-coverage repeaters and put them in a “Tier 1” zone. Smaller or closer repeaters within ~20 miles go in a “Tier 2” zone. Even if traffic is sparse, having them ready means you won’t miss anything unexpected.</li>
-  <li><strong>DMR repeaters:</strong> Digital repeaters require correct talkgroups and time slots. <strong>Digital Monitor</strong> is essential to hear what’s active. <strong>TG 9 (local)</strong> should always be programmed. BrandMeister and NEDECN overlap in some areas but operate as separate networks.</li>
-  <li><strong>Hotspots:</strong> Hotspots give reliable worldwide access independent of local repeaters. Talkgroup changes only take effect when the system is idle. They’re great for experimenting and testing settings without relying on RF propagation.</li>
-</ul>
+  <ul>
+    <li><strong>FM repeaters:</strong> Use <strong>RepeaterBook</strong> to find wide-coverage repeaters for “Tier 1.” Smaller nearby repeaters go in “Tier 2.” Even if mostly quiet, having them ready is handy.</li>
+    <li><strong>DMR repeaters:</strong> Correct talkgroups and time slots matter. <strong>Digital Monitor</strong> helps you hear activity. TG 9 (local) is essential. BrandMeister and NEDECN are separate networks.</li>
+    <li><strong>Hotspots:</strong> Provide reliable worldwide access. Changes take effect only when idle, ideal for experimentation without depending on RF propagation.</li>
+  </ul>
 
-<p><strong>Technical realizations:</strong></p>
-<ul>
-  <li>Pulling repeaters by <strong>distance</strong>, not state, captures nearby systems that are easy to miss.</li>
-  <li>How zones and scan lists are organized makes or breaks day-to-day usability.</li>
-  <li>Seeing full signal but hearing nothing is usually a <strong>talkgroup or time slot issue</strong>, not RF.</li>
-  <li>Adding more talkgroups reduces confusion on repeaters carrying overlapping regional traffic.</li>
-</ul>
+  <p><strong>Technical realizations:</strong></p>
+  <ul>
+    <li>Pull repeaters by <strong>distance</strong> to catch nearby systems.</li>
+    <li>Well-organized zones/scan lists make daily use smoother.</li>
+    <li>Full signal but no audio? Usually a <strong>talkgroup/time slot</strong> issue.</li>
+    <li>More talkgroups reduce confusion on overlapping repeaters.</li>
+  </ul>
+</details>
 
-<h3>Antennas</h3>
-<p>Most of my operating has been indoors and not especially close to major repeaters, which quickly made it clear that setup and antenna choice matter as much as the radio itself. Everything is indoor and portable for now—no permanent installs.</p>
+<details>
+  <summary>Antennas</summary>
+  <p>Indoor operation shows that antenna and placement matter as much as the radio. Everything here is portable—no permanent installs.</p>
 
-<ul>
-  <li><strong>Rubber duck:</strong> Fine for very local work (≈5–10 miles). Simple and always available.</li>
-  <li><strong>Signal Stick:</strong> A step up from the stock antenna while still portable. Solid indoor receive out to ~15–25 miles, and <strong>sufficient for receiving satellite passes</strong>. Staying vertical and near a window makes a huge difference.</li>
-  <li><strong>Slim Jim (window-mounted):</strong> By far the best performer for terrestrial work. From a second-floor window, it reliably RX/TX repeaters around 40 miles away and makes FM operation with an HT feel consistent instead of hit-or-miss.</li>
-</ul>
+  <table>
+    <tr>
+      <th>Antenna</th>
+      <th>Range (miles)</th>
+      <th>Notes</th>
+    </tr>
+    <tr>
+      <td>Rubber Duck</td>
+      <td>5–10</td>
+      <td>Simple, always ready</td>
+    </tr>
+    <tr>
+      <td>Signal Stick</td>
+      <td>15–25</td>
+      <td>Portable, vertical near window, <strong>receives satellites</strong></td>
+    </tr>
+    <tr>
+      <td>Slim Jim (window)</td>
+      <td>≈40</td>
+      <td>Indoor terrestrial, consistent RX/TX</td>
+    </tr>
+  </table>
+</details>
 
 <h3>Looking Ahead</h3>
-<p>There’s plenty I want to explore as I get more comfortable with the 878:</p>
+<p>Future goals as I get more comfortable:</p>
 
 <ul>
-  <li><strong>Satellite work:</strong> The Signal Stick is enough to receive satellites, but eventually I want to try an <strong>Arrow antenna</strong> to work them actively.</li>
-  <li><strong>APRS:</strong> Setting up the radio to send and receive APRS packets will open up another layer of experimentation, like tracking stations and integrating weather or telemetry data.</li>
-  <li><strong>Expanding DMR use:</strong> Experimenting with more talkgroups and networks, and making sense of time slots and bridging between BrandMeister and NEDECN.</li>
-  <li><strong>Portable and mobile setups:</strong> Finding flexible ways to use the HT indoors, at work, or on the go, while still getting reliable RX/TX performance.</li>
-  <li><strong>Refining codeplug strategies:</strong> Continuously organizing zones, talkgroups, and scan lists to make scanning predictable and fun.</li>
+  <li><strong>Satellite work:</strong> Signal Stick works for receive; eventually plan to try an <strong>Arrow antenna</strong> for two-way.</li>
+  <li><strong>APRS:</strong> Track stations, integrate weather, telemetry.</li>
+  <li><strong>DMR expansion:</strong> Experiment with talkgroups, time slots, bridging networks.</li>
+  <li><strong>Portable/mobile setups:</strong> Flexible indoor/outdoor use with reliable RX/TX.</li>
+  <li><strong>Refining codeplug:</strong> Zones, talkgroups, scan lists—organized for predictability and fun.</li>
 </ul>
+
+</body>
+</html>
 
   <footer>
    <hr>
