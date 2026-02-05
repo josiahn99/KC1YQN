@@ -1,5 +1,7 @@
 // Cloudflare Worker script
-let lastHeardData = {};  // global variable to store latest JSON
+
+// Store latest payload in memory
+let lastHeardData = {};  
 
 addEventListener('fetch', event => {
   event.respondWith(handleRequest(event.request))
@@ -7,7 +9,7 @@ addEventListener('fetch', event => {
 
 async function handleRequest(request) {
 
-  // Handle preflight CORS requests (Chrome requires this)
+  // Handle CORS preflight (Chrome requires this)
   if (request.method === "OPTIONS") {
     return new Response(null, {
       headers: {
@@ -21,14 +23,14 @@ async function handleRequest(request) {
   // Handle POST requests from Pi-Star
   if (request.method === "POST") {
     try {
-      const data = await request.json()   // parse incoming JSON
-      lastHeardData = data                // store latest data
+      const data = await request.json();   // parse incoming JSON
+      lastHeardData = data;                // store latest data
       return new Response('OK', {
         status: 200,
         headers: { "Access-Control-Allow-Origin": "*" }
-      })
+      });
     } catch (err) {
-      return new Response('Invalid JSON', { status: 400 })
+      return new Response('Invalid JSON', { status: 400 });
     }
   }
 
@@ -39,9 +41,9 @@ async function handleRequest(request) {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*"
       }
-    })
+    });
   }
 
   // Any other method → not allowed
-  return new Response('Method not allowed', { status: 405 })
+  return new Response('Method not allowed', { status: 405 });
 }
