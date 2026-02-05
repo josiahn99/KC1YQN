@@ -6,24 +6,24 @@ function updateStatus() {
   fetch(workerURL)
     .then(res => res.json())
     .then(data => {
+      // check that entries exist
       if (!data.entries || data.entries.length === 0) {
         document.getElementById("status").innerText = "No data yet";
         return;
       }
 
-      // Latest entry
+      // take the latest entry
       const latest = data.entries[data.entries.length - 1];
 
-      // Show timestamp (callsign field in this JSON) and main info (tg_slot)
-      const timestamp = latest.callsign ?? "—";
-      const info = latest.tg_slot ?? "—";
+      // Use only tg_slot field
+      const info = latest.tg_slot ?? "No info";
 
       document.getElementById("status").innerHTML = `
-        <p><strong>Time:</strong> ${timestamp}</p>
         <p><strong>Info:</strong> ${info}</p>
+        <p><em>Generated:</em> ${data.generated ?? "Unknown"}</p>
       `;
 
-      // Stale warning based on generated timestamp
+      // Stale warning
       if (data.generated) {
         const ageMin = (Date.now() - Date.parse(data.generated)) / 60000;
         if (ageMin > 10) {
@@ -38,6 +38,8 @@ function updateStatus() {
     });
 }
 
-// Initial load
+// initial load
 updateStatus();
+
+// refresh every 60s
 setInterval(updateStatus, 60000);
