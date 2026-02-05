@@ -1,4 +1,4 @@
-fetch("https://your-worker-name.workers.dev")
+fetch("https://muddy-pond-8cd0.josiahn.workers.dev/")
   .then(response => response.json())
   .then(data => {
     document.getElementById("status").innerHTML = `
