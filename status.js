@@ -11,17 +11,16 @@ function updateStatus() {
         return;
       }
 
-      // Get the most recent entry
+      // Latest entry
       const latest = data.entries[data.entries.length - 1];
-      const format = (v) => v ?? "—";
 
       document.getElementById("status").innerHTML = `
-        <p><strong>Time:</strong> ${format(latest.callsign)}</p>
-        <p><strong>Mode:</strong> ${format(latest.mode)}</p>
-        <p><strong>Talkgroup Info:</strong> ${format(latest.tg_slot)}</p>
+        <p><strong>Time:</strong> ${latest.callsign ?? "—"}</p>
+        <p><strong>Date/Mode:</strong> ${latest.mode ?? "—"}</p>
+        <p><strong>Info:</strong> ${latest.tg_slot ?? "—"}</p>
       `;
 
-      // Stale data warning
+      // Stale warning
       if (data.generated) {
         const ageMin = (Date.now() - Date.parse(data.generated)) / 60000;
         if (ageMin > 10) {
