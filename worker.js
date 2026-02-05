@@ -1,18 +1,47 @@
-// status.js
-fetch("muddy-pond-8cd0.josiahn.workers.dev")  // replace with your real Worker URL
-  .then(response => response.json())           // parse JSON from Worker
-  .then(data => {
-    // Insert the data into the page
-    document.getElementById("status").innerHTML = `
-      <p><strong>Callsign:</strong> ${data.callsign}</p>
-      <p><strong>Mode:</strong> ${data.mode}</p>
-      <p><strong>Talkgroup:</strong> ${data.talkgroup}</p>
-      <p><strong>Last Heard:</strong> ${data.last_heard}</p>
-      <p><strong>RSSI:</strong> ${data.rssi} dBm</p>
-    `;
-  })
-  .catch(error => {
-    // Show a user-friendly error
-    document.getElementById("status").innerText = "Failed to load data";
-    console.error("Error fetching data:", error);
-  });
+// Cloudflare Worker script
+let lastHeardData = {};  // global variable to store latest JSON
+
+addEventListener('fetch', event => {
+  event.respondWith(handleRequest(event.request))
+})
+
+async function handleRequest(request) {
+
+  // Handle preflight CORS requests (Chrome requires this)
+  if (request.method === "OPTIONS") {
+    return new Response(null, {
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type",
+      },
+    });
+  }
+
+  // Handle POST requests from Pi-Star
+  if (request.method === "POST") {
+    try {
+      const data = await request.json()   // parse incoming JSON
+      lastHeardData = data                // store latest data
+      return new Response('OK', {
+        status: 200,
+        headers: { "Access-Control-Allow-Origin": "*" }
+      })
+    } catch (err) {
+      return new Response('Invalid JSON', { status: 400 })
+    }
+  }
+
+  // Handle GET requests from your website
+  if (request.method === "GET") {
+    return new Response(JSON.stringify(lastHeardData), {
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*"
+      }
+    })
+  }
+
+  // Any other method → not allowed
+  return new Response('Method not allowed', { status: 405 })
+}
