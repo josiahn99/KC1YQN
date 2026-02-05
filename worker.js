@@ -1,5 +1,5 @@
 // status.js
-fetch("https://YOUR-WORKER-NAME.workers.dev")  // replace with your real Worker URL
+fetch("muddy-pond-8cd0.josiahn.workers.dev")  // replace with your real Worker URL
   .then(response => response.json())           // parse JSON from Worker
   .then(data => {
     // Insert the data into the page
