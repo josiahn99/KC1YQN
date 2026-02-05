@@ -1,6 +1,6 @@
 // status.js
 const workerURL = "https://muddy-pond-8cd0.josiahn.workers.dev/"; // replace with your Worker URL
-// status.js - fetch Pi-Star last heard data
+// status.js -
 
 function updateStatus() {
   fetch(workerURL)
@@ -14,13 +14,16 @@ function updateStatus() {
       // Latest entry
       const latest = data.entries[data.entries.length - 1];
 
+      // Show timestamp (callsign field in this JSON) and main info (tg_slot)
+      const timestamp = latest.callsign ?? "—";
+      const info = latest.tg_slot ?? "—";
+
       document.getElementById("status").innerHTML = `
-        <p><strong>Time:</strong> ${latest.callsign ?? "—"}</p>
-        <p><strong>Date/Mode:</strong> ${latest.mode ?? "—"}</p>
-        <p><strong>Info:</strong> ${latest.tg_slot ?? "—"}</p>
+        <p><strong>Time:</strong> ${timestamp}</p>
+        <p><strong>Info:</strong> ${info}</p>
       `;
 
-      // Stale warning
+      // Stale warning based on generated timestamp
       if (data.generated) {
         const ageMin = (Date.now() - Date.parse(data.generated)) / 60000;
         if (ageMin > 10) {
@@ -37,6 +40,4 @@ function updateStatus() {
 
 // Initial load
 updateStatus();
-
-// Refresh every 60 seconds
 setInterval(updateStatus, 60000);
