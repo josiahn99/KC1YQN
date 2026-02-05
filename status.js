@@ -3,28 +3,29 @@ const workerURL = "https://muddy-pond-8cd0.josiahn.workers.dev/"; // replace wit
 // status.js -
 
 
+// status.js - fetch Pi-Star last heard data
+// replace with your Worker URL
+
 function updateStatus() {
   fetch(workerURL)
     .then(res => res.json())
     .then(data => {
-      // check that entries exist
       if (!data.entries || data.entries.length === 0) {
         document.getElementById("status").innerText = "No data yet";
         return;
       }
 
-      // take the latest entry
+      // Get the most recent entry
       const latest = data.entries[data.entries.length - 1];
-
-      // Use only tg_slot field
-      const info = latest.tg_slot ?? "No info";
+      const format = (v) => v ?? "—";
 
       document.getElementById("status").innerHTML = `
-        <p><strong>Info:</strong> ${info}</p>
-        <p><em>Generated:</em> ${data.generated ?? "Unknown"}</p>
+        <p><strong>Time:</strong> ${format(latest.callsign)}</p>
+        <p><strong>Mode:</strong> ${format(latest.mode)}</p>
+        <p><strong>Talkgroup Info:</strong> ${format(latest.tg_slot)}</p>
       `;
 
-      // Stale warning
+      // Warning if data is stale
       if (data.generated) {
         const ageMin = (Date.now() - Date.parse(data.generated)) / 60000;
         if (ageMin > 10) {
@@ -42,5 +43,5 @@ function updateStatus() {
 // initial load
 updateStatus();
 
-// refresh every 60s
+// refresh every 60 seconds
 setInterval(updateStatus, 60000);
