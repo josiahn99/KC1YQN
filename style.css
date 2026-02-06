@@ -44,19 +44,6 @@ a:focus-visible {
     outline-offset: 3px;
 }
 
-/* Card-style links */
-a.card {
-    display: block;
-    padding: 1rem;
-    border-radius: 6px;
-    text-decoration: none;
-    color: inherit;
-}
-
-a.card:hover {
-    background: #252525;
-}
-
 /* ----------------------------
    Headings
    ---------------------------- */
