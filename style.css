@@ -1,28 +1,65 @@
 /* ----------------------------
+   Theme variables (dark-first)
+   ---------------------------- */
+:root {
+    --bg: #121212;
+    --fg: #e0e0e0;
+    --panel: #1e1e1e;
+    --panel-alt: #181818;
+    --border: #333;
+    --accent: #90d5ff;
+    --accent-soft: rgba(144, 213, 255, 0.5);
+    --link: #58A6FF;
+}
+
+/* ----------------------------
    Global page setup
    ---------------------------- */
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 17px;
     line-height: 1.55;
-    max-width: 800px;
-    margin: 0 auto;
+    margin: 0;
     padding: 20px;
-    background-color: #121212; /* change to #f9f9f9 for light mode */
-    color: #e0e0e0;           /* change to #222 for light mode */
+    background-color: var(--bg);
+    color: var(--fg);
 }
 
-/* Links */
+/* Main content container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ----------------------------
+   Links
+   ---------------------------- */
 a {
-    color: #58A6FF;
+    color: var(--link);
     text-decoration: underline;
+}
+
+a:focus-visible {
+    outline: 2px dashed var(--accent);
+    outline-offset: 3px;
+}
+
+/* Card-style links */
+a.card {
+    display: block;
+    padding: 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    color: inherit;
 }
 
 a.card:hover {
     background: #252525;
 }
 
-/* Headings */
+/* ----------------------------
+   Headings
+   ---------------------------- */
 h1 {
     font-size: 2rem;
     font-weight: 500;
@@ -36,7 +73,7 @@ h1 {
 h2 {
     font-size: 1.5rem;
     font-weight: 500;
-    color: #90d5ff;
+    color: var(--accent);
     margin-top: 1.5rem;
     margin-bottom: 0.75rem;
 }
@@ -49,15 +86,16 @@ h3 {
     margin-bottom: 0.5rem;
 }
 
-/* Log entry style */
+/* ----------------------------
+   Log entries
+   ---------------------------- */
 .log-entry {
     padding: 1rem 1.25rem;
     margin: 2rem 0;
-    border-left: 3px solid rgba(144, 213, 255, 0.5);
-    background-color: rgba(20, 20, 20, 0.6);
+    border-left: 3px solid var(--accent-soft);
+    background-color: rgba(30, 30, 30, 0.8);
     border-radius: 4px;
     line-height: 1.6;
-    position: relative;
 }
 
 .log-entry .date {
@@ -74,7 +112,8 @@ h3 {
     margin: 1rem 0;
 }
 
-.log-entry ul, .log-entry ol {
+.log-entry ul,
+.log-entry ol {
     margin-left: 1rem;
 }
 
@@ -82,14 +121,9 @@ h3 {
     color: #ffffff;
 }
 
-/* Main container */
-.container {
-    width: 80%;
-    max-width: 600px;
-    margin: 20px auto;
-}
-
-/* Grid layout */
+/* ----------------------------
+   Grid layout
+   ---------------------------- */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -100,44 +134,45 @@ h3 {
 .grid a {
     padding: 0;
     margin: 0;
-    white-space: nowrap;
 }
 
-/* Box styling */
-.box {
-    border: 1px solid #000;
-    padding: 10px;
-    margin: 10px 0;
-    background-color: #fff;
-}
-
-ul, ol {
+/* ----------------------------
+   Lists
+   ---------------------------- */
+ul,
+ol {
     padding-left: 20px;
     margin: 0 0 10px 0;
 }
 
-/* Tables */
+/* ----------------------------
+   Tables (dark mode)
+   ---------------------------- */
 table {
     border-collapse: collapse;
     width: 100%;
     margin: 0.5em 0 1em 0;
+    background: var(--panel);
 }
 
-th, td {
-    border: 1px solid #ccc;
+th,
+td {
+    border: 1px solid var(--border);
     padding: 6px 10px;
     text-align: left;
 }
 
 th {
-    background: #e0e0e0;
+    background: #202020;
 }
 
 tr:nth-child(even) {
-    background: #f5f5f5;
+    background: var(--panel-alt);
 }
 
-/* Header */
+/* ----------------------------
+   Header
+   ---------------------------- */
 header {
     display: flex;
     align-items: center;
@@ -159,16 +194,20 @@ header {
 header h1 {
     font-size: 2rem;
     font-weight: normal;
-    color: #90D5FF;
+    color: var(--accent);
     margin: 0;
+    border: none;
+    padding: 0;
 }
 
-/* Collapsible sections */
+/* ----------------------------
+   Collapsible sections
+   ---------------------------- */
 details {
     margin-bottom: 1em;
-    padding: 0.5em 1em;
-    background: #fff;
-    border: 1px solid #ccc;
+    padding: 0.75em 1em;
+    background: var(--panel);
+    border: 1px solid var(--border);
     border-radius: 5px;
 }
 
@@ -182,28 +221,29 @@ summary::-webkit-details-marker {
     display: none;
 }
 
-details[open] summary::before {
-    content: "▼ ";
-}
-
 summary::before {
     content: "► ";
 }
 
+details[open] summary::before {
+    content: "▼ ";
+}
+
 details a {
-    color: #00529B;
+    color: var(--link);
     text-decoration: underline;
 }
 
-/* Responsive tweaks */
+/* ----------------------------
+   Responsive tweaks
+   ---------------------------- */
 @media (max-width: 600px) {
     body {
         padding: 10px;
     }
-    .container {
-        width: 95%;
-    }
-    th, td {
+
+    th,
+    td {
         padding: 5px 8px;
     }
 }
