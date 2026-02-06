@@ -18,6 +18,10 @@ a {
     text-decoration: underline;
 }
 
+a.card:hover {
+    background: #252525;
+}
+
 /* Headings */
 h1 {
     font-size: 2rem;
