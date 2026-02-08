@@ -33,7 +33,7 @@ function updateStatus() {
 
       // Header row
       const header = document.createElement("tr");
-      ["Time", "Mode", "Callsign", "Talkgroup Info"].forEach(text => {
+      ["Time", "Callsign", "Details"].forEach(text => {
         const th = document.createElement("th");
         th.innerText = text;
         th.style.border = "1px solid #333";
@@ -45,7 +45,7 @@ function updateStatus() {
       // Add each entry
       data.entries.forEach(entry => {
         const tr = document.createElement("tr");
-        [entry.time, entry.mode, entry.callsign, entry.tg_slot].forEach(val => {
+        [entry.time, entry.callsign, entry.tg_slot].forEach(val => {
           const td = document.createElement("td");
           td.innerText = val ?? "";
           td.style.border = "1px solid #333";
