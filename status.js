@@ -1,14 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  fetch('status.json')
+  fetch('data/radiolog.json')
     .then(response => response.json())
     .then(data => {
       const tableBody = document.getElementById('tableBody');
       tableBody.innerHTML = ""; // clear previous rows
 
+      // Show last 50 entries, newest first
       data.slice(-50).reverse().forEach(entry => {
         const tr = document.createElement('tr');
 
+        // Use explicit fields from JSON
         const timeCell = document.createElement('td');
         timeCell.textContent = entry.time;
 
