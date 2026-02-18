@@ -29,4 +29,10 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .catch(error => console.error('Error loading JSON:', error));
 
+    // Initial load
+  loadLog();
+
+  // Auto-refresh every 30 seconds
+  setInterval(loadLog, 30000);
+  
 });
