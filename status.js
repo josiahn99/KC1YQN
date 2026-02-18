@@ -3,30 +3,34 @@ document.addEventListener("DOMContentLoaded", function () {
   fetch('/status.json')
     .then(response => response.json())
     .then(data => {
-      if (!data.length) return;
 
-      const headerRow = document.getElementById('tableHeader');
       const tableBody = document.getElementById('tableBody');
 
-      // Headers
-      Object.keys(data[0]).forEach(key => {
-        const th = document.createElement('th');
-        th.textContent = key;
-        headerRow.appendChild(th);
-      });
+      // Clear table first (important if you later add refresh)
+      tableBody.innerHTML = "";
 
-      // Rows
-      data.forEach(entry => {
+      // Show newest entries first
+      data.reverse().forEach(entry => {
+
         const tr = document.createElement('tr');
 
-        Object.values(entry).forEach(value => {
-          const td = document.createElement('td');
-          td.textContent = value;
-          tr.appendChild(td);
-        });
+        const timeCell = document.createElement('td');
+        timeCell.textContent = entry.time;
+
+        const callsignCell = document.createElement('td');
+        callsignCell.textContent = entry.callsign;
+
+        const tgCell = document.createElement('td');
+        tgCell.textContent = entry.tg_slot;
+
+        tr.appendChild(timeCell);
+        tr.appendChild(callsignCell);
+        tr.appendChild(tgCell);
 
         tableBody.appendChild(tr);
+
       });
+
     })
     .catch(error => console.error('Error loading JSON:', error));
 
