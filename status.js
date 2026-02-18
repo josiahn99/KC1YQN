@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  fetch('status.json')
+  fetch('/status.json')
     .then(response => response.json())
     .then(data => {
       if (!data.length) return;
