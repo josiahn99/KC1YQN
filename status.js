@@ -1,17 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  fetch('/status.json')
+  fetch('status.json')
     .then(response => response.json())
     .then(data => {
-
       const tableBody = document.getElementById('tableBody');
+      tableBody.innerHTML = ""; // clear previous rows
 
-      // Clear table first (important if you later add refresh)
-      tableBody.innerHTML = "";
-
-      // Show newest entries first
-      data.reverse().forEach(entry => {
-
+      data.slice(-50).reverse().forEach(entry => {
         const tr = document.createElement('tr');
 
         const timeCell = document.createElement('td');
@@ -28,9 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
         tr.appendChild(tgCell);
 
         tableBody.appendChild(tr);
-
       });
-
     })
     .catch(error => console.error('Error loading JSON:', error));
 
