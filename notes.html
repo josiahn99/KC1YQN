@@ -7,70 +7,112 @@
 </head>
 <body>
 
-  <header>
-    <h1>Notes</h1>
-  </header>
+<header>
+  <h1>Notes – KC1YQN</h1>
+</header>
 
-  <main>
+<main class="container">
 
-    <section>
-      <h2>Broad Direction</h2>
+  <!-- Nets Section -->
+  <section>
+    <h2>Nets</h2>
 
+    <h3><a class="card" href="https://ema.arrl.org/heavy-hitters-traffic-net/">Heavy Hitters Traffic Net</a></h3>
+    <p>9:45pm nightly</p>
+    <p>Boston, MA - W1BOS - 145.230(-), PL: 88.5 Hz</p>
+    <p>Mendon, MA - K1KWP - 146.610(-), PL: 146.2 Hz</p>
+
+    <h3><a class="card" href="http://www.georgesoldtimersnet.com/">George's Old Timers Net</a></h3>
+    <p>7:30pm nightly</p>
+    <p>Paxton, MA - W1BIM - 146.970(-), PL: 114.8 Hz</p>
+
+    <h3><a class="card" href="https://nedecn.org/about-nedecn/dmr-nets/">NEDECN DMR Nets</a></h3>
+    <p>New England DMR Net - 8pm Mondays</p>
+    <p>Southborough, MA - AE1C - 145.270(-), CC: 7</p>
+  </section>
+
+  <!-- Field Notes -->
+  <section>
+    <h2>Field Notes</h2>
+<section class="log-entry">
+  <h3>February Update</h3>
+
+  <p>January was my first full month with the Anytone 878. I feel like I’ve got the basics down now — codeplugs make sense, BrandMeister isn’t intimidating anymore, and the hotspot behaves mostly the way I expect it to. Still a beginner, but not lost.</p>
+
+  <p>February has moved fast, but it also feels like I’ve learned so much that it’s been longer than it actually has. Less structured, more exploring. I kept finding new rabbit holes and trying to figure out what parts of this hobby I actually care about most.</p>
+
+  <p>At the beginning of the month, I had my first ISS reception. I used an ISS tracker app and caught an afternoon pass that was almost straight overhead — about 80° elevation. I heard stations from Iowa, Ohio, and Connecticut coming through the International Space Station.</p>
+
+  <p>That was one of those moments where radio stops being abstract. You’re standing there with a handheld, and you’re hearing signals relayed through something orbiting the Earth at 17,000 mph. Having to accommodate for Doppler shift during the 10-minute pass was probably the coolest part. It makes physics feel immediate.</p>
+
+  <h4>Programming + Radio</h4>
+  <p>One thing I’ve wanted to do for several years is have an actual reason to buy and work with a Raspberry Pi. With my DMR hotspot running Pi-Star, I finally have an in. I’ve learned some very rudimentary Linux command line skills (git, ssh, nano, sudo, editing config files, etc.), which has been very satisfying.</p>
+
+  <p>I wrote a Python script that takes the Pi-Star log files, parses them, converts the data to JSON, and automatically pushes it to my site using the GitHub API. The site itself is hosted on GitHub Pages.</p>
+
+  <p>Originally, I tried using Cloudflare Workers, but that turned out to be unnecessary complexity for what I’m doing. I simplified it since my goal is basically a static site and a few focused Python scripts.</p>
+
+  <p>I did have ChatGPT generate the JavaScript for displaying the data and help outline the Python script. It’s been a useful guide, especially when I make sure I understand any lines of code I don’t recognize. At the same time, I’m not trying to memorize syntax (hopeless). I care much more about understanding the concepts. That’s where I want the effort to go. I also wrote a lot of additional Python myself, and that part matters to me.</p>
+
+  <p>Now I’ve got a live dataset of my own activity updating automatically. That opens the door to experimenting — adding geographic info, visualizing patterns, maybe looking at time-of-day trends. Data analysis is another area I’m trying to explore, so this feels like a natural extension.</p>
+
+  <p>It’s small, but it feels like building infrastructure instead of just consuming technology.</p>
+
+  <h4>Operating</h4>
+  <p>I’ve made a few QSOs — mostly on TG3100 (USA) and TG91 (Worldwide). Not a ton.</p>
+
+  <p>If I’m honest, when I’m tired I don’t feel like talking. And most days, the only time I really have available to talk is when I’m tired.</p>
+
+  <p>Still, I’m aiming for somewhere between 100–300 QSOs this year. That’s enough to build real experience without turning it into a numbers game.</p>
+
+  <p>I’m also going to try to make time for a couple of weekly nets so I can become more active in the local ham scene.</p>
+
+  <p>It’s easy for me to retreat into theory and projects. But transmitting matters. This is a communication hobby. I don’t want to be the guy who understands antennas but never keys up.</p>
+
+  <h4>What’s Actually Driving This</h4>
+  <p>Since I decided to pick up this hobby, I’ve realized what’s really pulling me into amateur radio isn’t just the gear or even the contacts. It’s the science.</p>
+
+  <p>I want to understand what’s happening underneath it all — not just “this works,” but why it works.</p>
+
+  <p>I’ve been influenced a lot by Daniel and Kelly’s Extraordinary Universe and especially by <em>Remembrance of Earth's Past</em> by Cixin Liu. That trilogy permanently changed how I think about physics and long-term human progress. It made electromagnetic theory feel important — even tied to the future of the human race. And any small bit of knowledge I can acquire contributes, however tiny.</p>
+
+  <p>Right now I’m about halfway through <em>The Radio Theory Handbook</em> by Ron Bertrand (VK2DQ). It’s doing exactly what I need — rebuilding fundamentals before jumping into heavier material.</p>
+
+  <p>The long-term goal is to really understand Maxwell’s equations. Not just recognize them — actually understand what they mean. I had 2–3 years of calculus in high school. I’m rusty, but I don’t think it’s beyond reach if I approach it seriously.</p>
+
+  <p>After finishing <em>The Radio Theory Handbook</em> and brushing up on calculus, I plan to work through <em>Introduction to Electrodynamics</em> by David J. Griffiths.</p>
+
+  <p>I’m realistic. I’m not trying to become a professional physicist. But I want depth. Even undergraduate-level mastery of this material would be meaningful.</p>
+
+  <h4>Broad Direction</h4>
+  <p>I don’t want this to turn into ten unrelated hobbies hiding under the word “radio.” I’m trying to let it grow, but in a way that actually builds on itself.</p>
+
+  <p>Right now, that looks like this.</p>
+
+  <p>I want to operate more. I’m aiming for somewhere between 100–300 QSOs this year. Not because the number matters that much, but because I can already see how easy it is for me to retreat into theory and projects instead of actually getting on the air. If I’m tired, I don’t feel like talking. That’s real. But if I never push past that, I won’t grow as an operator.</p>
+
+  <p>I also plan to get my General and Amateur Extra this year. But I don’t want to brute-force the question pool and move on. I’d rather understand the material first and let the exams reflect that. That’s why I’m working through fundamentals and brushing up on calculus before diving into heavier material.</p>
+
+  <p>HF is clearly in my future. I’ve already been thinking through 40 meters, antenna height (around 60 feet if I can manage it), inverted-V options, and what kind of pattern I’d want if I’m trying to work Europe. I don’t want a yard full of random wires, and I don’t want to install something I don’t understand. When I put up an HF antenna, I want to know what it’s doing and why.</p>
+
+  <p>On the programming side, I want to keep building small systems around my station. The automated Pi-Star logging was a good start. I’d like to add geographic info, maybe visualize propagation patterns, and keep refining the site so it feels clean and intentional. Nothing flashy — just steady improvement.</p>
+
+  <p>Underneath all of this is the real reason I’m here: physics. I want Maxwell’s equations to make sense someday. I’m not trying to become a professional physicist. But I do want to understand electromagnetic theory at a level that feels solid and earned. Amateur radio feels like a practical doorway into that world.</p>
+
+  <p>There are a lot of possible side paths — digital modes, SDR, meteor scatter, antenna modeling, hardware builds. I’ll probably touch some of them. But I don’t need to chase everything at once.</p>
+
+  <p>This is going to take years. That’s fine.</p>
+
+</section>
+
+    
+    <section class="log-entry">
+      <h3>February 24, 2026 — Winter Storm Reception Test</h3>
       <p>
-        I don’t want this to turn into ten unrelated hobbies hiding under the word “radio.”
-        I’m trying to let it grow, but in a way that actually builds on itself.
+        During a major winter storm that dropped roughly 24 inches of snow, I monitored local repeaters.
+        Signals seemed especially clean, and activity was high.
       </p>
-
-      <p>
-        I’m aiming for somewhere between <strong>100–300 QSOs this year</strong>.
-        The number itself isn’t the point — it’s about operating consistently instead
-        of retreating into theory or projects when I’m tired.
-      </p>
-
-      <p>
-        I plan to earn my <strong>General and Amateur Extra</strong> this year.
-        Not by memorizing the pool and forgetting it, but by actually understanding
-        the material behind it.
-      </p>
-
-      <p>
-        HF is clearly ahead. I’ve been thinking through 40 meters, antenna height
-        (around 60 feet if possible), inverted-V options, and what kind of pattern
-        I’d want if I’m trying to work Europe. I don’t want random wire in the yard.
-        When I put something up, I want to understand what it’s doing.
-      </p>
-
-      <p>
-        On the programming side, I want to keep building small systems around the station.
-        The Pi-Star logging automation was a good start. I’d like to layer in geographic
-        data, maybe propagation visualization, and keep refining the site so it feels
-        intentional and clean.
-      </p>
-
-      <p>
-        Underneath all of this is physics. I want Maxwell’s equations to make sense someday.
-        Amateur radio is the practical doorway into that.
-      </p>
-
-      <p>
-        Operate. Study. Build. Keep going.
-      </p>
-    </section>
-
-
-    <section>
-      <h2>Winter Storm Reception Test</h2>
-
-      <p>
-        During a major winter storm that dropped roughly 24 inches of snow,
-        I monitored local repeaters throughout the event.
-        With everything quiet and snow-covered, signals were noticeably clean.
-      </p>
-
-      <p>
-        I was able to clearly receive activity from:
-      </p>
-
+      <p>I was able to clearly receive activity from:</p>
       <ul>
         <li>Whitman – WA1NPO</li>
         <li>West Bridgewater</li>
@@ -81,19 +123,152 @@
         <li>Whitman</li>
         <li>Portsmouth – W1SYE</li>
       </ul>
-
       <p>
-        This confirmed solid receive coverage across southeastern Massachusetts
-        and into Rhode Island, even under heavy winter conditions.
-        The station performed reliably.
+        This confirmed reliable receive coverage across southeastern Massachusetts and into Rhode Island, even under heavy snow.
       </p>
     </section>
 
-  </main>
+    <section class="log-entry">
+      <h3>February 2, 2026 — First ISS Reception</h3>
+      <p>
+        Used the ISS Tracker app to catch an afternoon pass with roughly 80° elevation.
+        Heard stations from Iowa, Ohio, and Connecticut.
+      </p>
+    </section>
 
-  <footer>
-    <p>K C 1 Y Q N</p>
-  </footer>
+    <section class="log-entry">
+      <h3>January 31 – February 1, 2026 — Things Clicking Into Place</h3>
+      <p>
+        Major breakthrough understanding Digital Monitor on the AT-878 and how DMR
+        time slots and talkgroups behave in practice.
+      </p>
+    </section>
+
+    <section class="log-entry">
+      <h3>January 28–30, 2026 — Minuteman Repeater Association</h3>
+      <p>
+        Successfully accessed K1KWP (Mendon) and confirmed transmit reach into the
+        <a href="https://mmra.org/">Minuteman Repeater Association</a> network.
+      </p>
+    </section>
+
+    <section class="log-entry">
+      <h3>January 23–25, 2026 — Southern New England</h3>
+      <p>
+        Revised my codeplug and explored local & regional repeaters. Snowstorm conditions (~12–24" snow) increased net activity, allowing testing of indoor reception and DMR functionality. Focused on Brandmeister & NEDECN talkgroups.
+      </p>
+      <section class="reception-entry">
+        <strong>January 23 — Southborough, MA (~11:00 AM)</strong>
+        <ul>
+          <li>Callsign: AE1C | Band: 2 m | Mode: DMR (Skywarn TG) | Distance: ~20 mi | Signal: S5</li>
+          <li>Notes: Skywarn talkgroup identified itself even though not explicitly programmed.</li>
+        </ul>
+      </section>
+      <section class="reception-entry">
+        <strong>January 23 — West Bridgewater, MA (11:25 AM)</strong>
+        <ul>
+          <li>Callsign: N1ZHG | Band: 2 m | Mode: Analog FM | Distance: ~28 mi | Signal: S4</li>
+          <li>Location: 1st floor, dining room</li>
+          <li>Notes: Stable, moderate indoor signal.</li>
+        </ul>
+      </section>
+      <section class="reception-entry">
+        <strong>January 23 — Cumberland, RI (11:45 AM)</strong>
+        <ul>
+          <li>Callsign: KB1RI | Frequency: 145.170 MHz | Band: 2 m | Mode: Analog FM | Distance: ~14 mi | Signal: S3–S4</li>
+          <li>Location: 2nd floor facing west; also workable from 1st-floor bedroom window facing north</li>
+          <li>Notes: Best reception when oriented west.</li>
+        </ul>
+      </section>
+      <section class="reception-entry">
+        <strong>January 23 — North Providence, RI (Skywarn) (12:00 PM)</strong>
+        <ul>
+          <li>Callsign: NB1RI | Frequency: 145.350 MHz | Band: 2 m | Mode: Analog FM | Distance: ~18 mi | Signal: S6</li>
+          <li>Location: 2nd floor near windows</li>
+          <li>Notes: Clear audio; strong indoor copy.</li>
+        </ul>
+      </section>
+      <section class="reception-entry">
+        <strong>January 23 — Mendon, MA (12:09 PM)</strong>
+        <ul>
+          <li>Callsign: K1KWP | Band: 2 m | Mode: Analog FM | Distance: ~12 mi | Signal: S3</li>
+          <li>Location: Indoor</li>
+          <li>Notes: Brief but readable.</li>
+        </ul>
+      </section>
+      <section class="reception-entry">
+        <strong>January 23 — Paxton, MA (7:45 PM)</strong>
+        <ul>
+          <li>Callsign: K1BIM | Band: 2 m | Mode: Analog FM | Distance: ~40 mi | Signal: S5–S9</li>
+          <li>Location: 2nd floor, not near a window</li>
+          <li>Notes: George's Old Timers Net; strong reception for distance with handheld antenna.</li>
+        </ul>
+      </section>
+      <section class="reception-entry">
+        <strong>January 23 — Bridgewater, MA (7:10 PM)</strong>
+        <ul>
+          <li>Callsign: W1MV | Band: 2 m | Mode: Analog FM | Distance: ~22 mi | Signal: S4</li>
+          <li>Location: Indoor</li>
+          <li>Notes: Usable.</li>
+        </ul>
+      </section>
+    </section>
+
+    <section class="log-entry">
+      <h3>January 17, 2026 — New Jersey Net</h3>
+      <p>Listened to NJ statewide linked net on Alpine, NJ repeater (~13 miles). Slim Jim greatly improved indoor reception compared to Signal Stick.</p>
+    </section>
+
+    <section class="log-entry">
+      <h3>January 15, 2026 — First FM Transmission</h3>
+      <p>Used Slim Jim in a 2nd-floor window aimed at W1BIM. Strong reception (~40 mi) during George’s Old Timers Net.</p>
+    </section>
+
+    <section class="log-entry">
+      <h3>January 13, 2026 — First QSO</h3>
+      <p>Configured Pi-Star hotspot, successfully completed first DMR QSO on North America talkgroup (station in China).</p>
+    </section>
+
+    <section class="log-entry">
+      <h3>January 5–8, 2026 — Antenna Upgrade</h3>
+      <p>Installed Slim Jim window antenna and Raspberry Pi 3B hotspot; tested W1BOS and W1BIM coverage.</p>
+    </section>
+
+    <section class="log-entry">
+      <h3>January 1–4, 2026 — MA: Long-Distance RX & First DMR TX</h3>
+      <p>Received W1BIM (~40 mi), successfully kerchunked W1ATD digital repeater (~30 mi).</p>
+    </section>
+
+    <section class="log-entry">
+      <h3>December 28–30, 2025 — Jupiter, FL: Early Nets & DMR</h3>
+      <p>Programmed repeaters, listened to local net, attempted AllStar, registered DMR ID, tried texting.</p>
+    </section>
+
+    <section class="log-entry">
+      <h3>December 25–27, 2025 — Northern NJ: First Reception & Net</h3>
+      <p>Switched to digital, lowered squelch, installed Signal Stick. First repeater heard: Alpine, NJ (~10–15 mi).</p>
+    </section>
+
+    <section class="log-entry">
+      <h3>December 3–15, 2025 — Licensing & CW</h3>
+      <p>Passed Technician exam via PARC, started Morse training and studying repeaters.</p>
+    </section>
+
+    <section class="log-entry">
+      <h3>November 20–30, 2025 — Radio Purchase</h3>
+      <p>Purchased Anytone AT-D878. DMR chosen to explore DX without HF; satellites possible with HT.</p>
+    </section>
+
+  </section>
+
+</main>
+
+<footer>
+  <hr>
+  <p>
+    <a class="back" href="index.html">← Home</a> • KC1YQN • FN42 • contact @ <a class="card" href="https://www.qrz.com/db/KC1YQN">QRZ.com</a>
+  </p>
+</footer>
 
 </body>
 </html>
