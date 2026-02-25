@@ -15,8 +15,8 @@ body {
     width: 100%;
     background-color: #121212;
     color: #90d5ff;
-    padding: 20px;
-    text-align: center;
+    padding: 20px 0px 20px 0px;
+    text-align: left;
     box-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
 
@@ -31,7 +31,7 @@ body {
 .sidebar {
   position: fixed;       /* stays fixed on the side */
   top: 60px;
-  left: 0;
+  left: 0px;
   width: 220px;          /* sidebar width */
   height: 100vh;         /* full viewport height */
   background-color: #1e1e1e;
