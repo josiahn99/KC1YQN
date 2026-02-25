@@ -30,7 +30,7 @@ body {
 /* --- Sidebar --- */
 .sidebar {
   position: fixed;       /* stays fixed on the side */
-  top: 0;
+  top: 60px;
   left: 0;
   width: 220px;          /* sidebar width */
   height: 100vh;         /* full viewport height */
