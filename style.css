@@ -1,262 +1,38 @@
 /* ----------------------------
-   Theme variables (dark-first)
+   Sidebar Navigation (Dark Theme)
    ---------------------------- */
-:root {
-    --bg: #121212;
-    --fg: #e0e0e0;
-    --panel: #1e1e1e;
-    --panel-alt: #181818;
-    --border: #333;
-    --accent: #90d5ff;
-    --accent-soft: rgba(144, 213, 255, 0.5);
-    --link: #58A6FF;
-}
-
-/* ----------------------------
-   Global page setup
-   ---------------------------- */
-body {
-    font-family: 'Source Code Pro", sans-serif;
-    font-size: 18px;
-    line-height: 1.55;
-    margin: 0;
-    padding: 20px;
-    background-color: var(--bg);
-    color: var(--fg);
-}
-
-/* Main content container */
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* ----------------------------
-   Links
-   ---------------------------- */
-a {
-    color: var(--link);
-    text-decoration: underline;
-}
-
-a:focus-visible {
-    outline: 2px dashed var(--accent);
-    outline-offset: 3px;
-}
-
-/* ----------------------------
-   Headings
-   ---------------------------- */
-h1 {
-    font-size: 2rem;
-    font-weight: 500;
-    color: #a0c4ff;
-    border-bottom: 1px dashed rgba(160, 196, 255, 0.5);
-    padding-bottom: 0.3rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
-
-h2 {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: var(--accent);
-    margin-top: 1.5rem;
-    margin-bottom: 0.75rem;
-}
-
-h3 {
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: #80c5ff;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-}
-
-/* ----------------------------
-   Log entries
-   ---------------------------- */
-.log-entry {
-    padding: 1rem 1.25rem;
-    margin: 2rem 0;
-    border-left: 3px solid var(--accent-soft);
-    background-color: rgba(30, 30, 30, 0.8);
-    border-radius: 4px;
-    line-height: 1.6;
-}
-
-.log-entry .date {
-    font-size: 0.9rem;
-    color: #a0c4ff;
-    font-weight: 500;
-    margin-bottom: 0.3rem;
-    display: block;
-}
-
-.log-entry hr {
-    border: 0;
-    border-top: 1px dashed rgba(144, 213, 255, 0.3);
-    margin: 1rem 0;
-}
-
-.log-entry ul,
-.log-entry ol {
-    margin-left: 1rem;
-}
-
-.log-entry strong {
-    color: #ffffff;
-}
-
-/* ----------------------------
-   Grid layout
-   ---------------------------- */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    column-gap: 3rem;
-    row-gap: 0.25rem;
-}
-
-.grid a {
-    padding: 0;
-    margin: 0;
-}
-
-/* ----------------------------
-   Lists
-   ---------------------------- */
-ul,
-ol {
-    padding-left: 20px;
-    margin: 0 0 10px 0;
-}
-
-/* ----------------------------
-   Tables (dark mode)
-   ---------------------------- */
-table {
-    border-collapse: collapse;
-    width: 100%;
-    margin: 0.5em 0 1em 0;
-    background: var(--panel);
-}
-
-th,
-td {
-    border: 1px solid var(--border);
-    padding: 6px 10px;
-    text-align: left;
-}
-
-th {
-    background: #202020;
-}
-
-tr:nth-child(even) {
-    background: var(--panel-alt);
-}
-
-/* ----------------------------
-   Header
-   ---------------------------- */
-header {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 2rem;
-}
-
-.header-logo {
-    height: 40px;
-    width: auto;
-    opacity: 0.75;
-    transition: opacity 0.2s ease-in-out;
-}
-
-.header-logo:hover {
-    opacity: 1;
-}
-
-header h1 {
-    font-size: 2rem;
-    font-weight: normal;
-    color: var(--accent);
-    margin: 0;
-    border: none;
-    padding: 0;
-}
-
-/* ----------------------------
-   Collapsible sections
-   ---------------------------- */
-details {
-    margin-bottom: 1em;
-    padding: 0.75em 1em;
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 5px;
-}
-
-summary {
-    font-weight: bold;
-    cursor: pointer;
-    outline: none;
-}
-
-summary::-webkit-details-marker {
-    display: none;
-}
-
-summary::before {
-    content: "► ";
-}
-
-details[open] summary::before {
-    content: "▼ ";
-}
-
-details a {
-    color: var(--link);
-    text-decoration: underline;
-}
-
-/* ----------------------------
-   Responsive tweaks
-   ---------------------------- */
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
-    }
-
-    th,
-    td {
-        padding: 5px 8px;
-    }
-}
-
-/* Sidebar */
 nav#sidebar {
   width: 220px;
-  background-color: #f5f5f5;
+  background-color: var(--panel);  /* match dark theme */
+  color: var(--fg);
   padding: 20px;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  box-shadow: 2px 0 5px rgba(0,0,0,0.5);
   height: 100vh;
   overflow-y: auto;
   position: fixed;
   top: 0;
   left: 0;
   transition: transform 0.3s ease;
+  z-index: 100; /* sit above main content slightly */
+}
+
+nav#sidebar h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
 }
 
 nav#sidebar h2 {
-  font-size: 1.2em;
-  margin-top: 20px;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--accent);
 }
 
 nav#sidebar ul {
-  list-style-type: none;
+  list-style: none;
   padding-left: 0;
+  margin: 0;
 }
 
 nav#sidebar li {
@@ -264,15 +40,17 @@ nav#sidebar li {
 }
 
 nav#sidebar a {
+  color: var(--link);
   text-decoration: none;
-  color: #333;
+  transition: color 0.2s ease;
 }
 
 nav#sidebar a:hover {
+  color: var(--accent-soft);
   text-decoration: underline;
 }
 
-/* Main content */
+/* Main content shift when sidebar is visible */
 main {
   flex: 1;
   padding: 20px;
@@ -280,7 +58,7 @@ main {
   transition: margin-left 0.3s ease;
 }
 
-/* Hamburger button */
+/* Hamburger button for mobile */
 .hamburger {
   display: none;
   position: fixed;
@@ -291,13 +69,13 @@ main {
   font-size: 1.5em;
   background: none;
   border: none;
+  color: var(--fg);
 }
 
-/* Mobile styles */
+/* Mobile responsiveness */
 @media (max-width: 768px) {
   nav#sidebar {
     transform: translateX(-100%);
-    position: fixed;
     z-index: 999;
   }
 
@@ -312,4 +90,9 @@ main {
   .hamburger {
     display: block;
   }
+}
+
+/* Optional: smooth scroll for in-page anchors */
+html {
+  scroll-behavior: smooth;
 }
