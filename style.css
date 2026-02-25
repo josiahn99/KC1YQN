@@ -30,7 +30,7 @@ body {
 /* --- Sidebar --- */
 .sidebar {
   position: fixed;       /* stays fixed on the side */
-  top: 60px;
+  top: 100px;
   left: 0px;
   width: 220px;          /* sidebar width */
   height: 100vh;         /* full viewport height */
@@ -54,7 +54,7 @@ body {
 /* --- Main content --- */
 main.container {
   margin-left: 220px;    /* sidebar width + padding */
-  padding: 60px 80px 10px 40px;
+  padding: 20px 80px 10px 40px;
 }
 
 /* --- Headings --- */
