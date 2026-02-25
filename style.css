@@ -49,7 +49,7 @@ body {
     background-color: #1e1e1e;
     padding: 20px;
     overflow-y: auto;
-    z-index: 500;
+    z-index: 900;
 }
 
 .sidebar a {
@@ -59,8 +59,7 @@ body {
   margin-bottom: 15px;
   font-weight: bold;
   height: calc(100vh - 60px)
-  z-index: 900; /* below header */
-}
+ }
 
 .sidebar a:hover {
   text-decoration: underline;
