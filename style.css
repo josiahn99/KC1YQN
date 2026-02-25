@@ -12,31 +12,43 @@ body {
    Top Header
 ---------------------------- */
 .top-header {
+    height: 60px;
     width: 100%;
-    background-color: #121212;
+    background-color: #1a1a1a;
     color: #90d5ff;
-    padding: 20px 0px 20px 0px;
-    text-align: left;
+    padding: 10px 20px;
+    text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    position: fixed; /* stays on top */
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
-/* Optional: smaller text for description */
 .top-header p {
-    margin-top: 5px;
     font-size: 0.9rem;
     color: #c0c0c0;
+    margin-top: 4px;
 }
 
-/* --- Sidebar --- */
+/* ----------------------------
+   Layout: Container
+---------------------------- */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
 .sidebar {
-  position: fixed;       /* stays fixed on the side */
-  top: 100px;
-  left: 0px;
-  width: 220px;          /* sidebar width */
-  height: 100vh;         /* full viewport height */
-  background-color: #1e1e1e;
-  padding: 20px;
-  overflow-y: auto;      /* scroll if needed */
+    width: 220px;
+    position: fixed;          
+    top: 60px;               /* below header */
+    left: 0;
+    height: calc(100vh - 60px);
+    background-color: #1e1e1e;
+    padding: 20px;
+    overflow-y: auto;
 }
 
 .sidebar a {
@@ -52,10 +64,11 @@ body {
 }
 
 /* --- Main content --- */
+/* Main content */
 .main {
-    margin-left: 220px;      
-    margin-top: 60px;        /* leave space for header */
-    padding: 20px 40px 20px 20px;
+    margin-left: 220px;      /* space for sidebar */
+    margin-top: 60px;        /* space for header */
+    padding: 20px 40px 20px 20px; /* top, right, bottom, left */
     min-height: calc(100vh - 60px);
 }
 
