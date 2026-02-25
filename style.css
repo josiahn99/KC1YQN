@@ -1,90 +1,82 @@
-/* Reset basic spacing */
+/* --- Basic Reset --- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Page background and font */
+/* --- Body --- */
 body {
-  background: #3e3e42;
-  color: #e0e0e0;
   font-family: Tahoma, sans-serif;
+  background: #121212;
+  color: #e0e0e0;
   line-height: 1.6;
+}
+
+/* --- Wrapper flex container --- */
+.site-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* --- Sidebar --- */
+.sidebar {
+  width: 220px;
+  background-color: #1e1e1e;
   padding: 20px;
+  flex-shrink: 0;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
 }
 
-/* Constrain content width */
-.container {
-  max-width: 800px;
-  margin: 0 auto;
+.sidebar a {
+  display: block;
+  color: #90d5ff;
+  text-decoration: none;
+  margin-bottom: 15px;
+  font-weight: bold;
 }
 
-/* Headings spacing */
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+/* --- Main content --- */
+main.container {
+  flex-grow: 1;
+  padding: 20px;
+  margin-left: 240px; /* width + padding of sidebar */
+}
+
+/* --- Headings --- */
 h1, h2, h3 {
   margin: 20px 0 10px;
 }
 
-/* Paragraph spacing */
-p {
+/* --- Paragraphs and lists --- */
+p, ul {
   margin-bottom: 15px;
 }
 
-/* Tables */
-table, th, td {
-  border: 1px solid black;
-}
-
-/* Lists */
 ul {
   margin-left: 20px;
-  margin-bottom: 15px;
 }
 
-/* Links */
-a {
-  color: #90d5ff;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Footer */
+/* --- Footer --- */
 footer {
   margin-top: 40px;
   font-size: 0.9em;
   color: #aaa;
 }
 
-/* --- Wrapper flex container --- */
-    .site-wrapper {
-      display: flex;
-      min-height: 100vh;
-    }
+footer a {
+  color: #90d5ff;
+  text-decoration: none;
+}
 
-    /* --- Sidebar --- */
-    .sidebar {
-      width: 220px;
-      background-color: #1e1e1e;
-      padding: 20px;
-      flex-shrink: 0;
-      height: 100vh;
-      position: fixed;
-      top: 0;
-      left: 0;
-      overflow-y: auto;
-    }
-
-    .sidebar a {
-      display: block;
-      color: #90d5ff;
-      text-decoration: none;
-      margin-bottom: 15px;
-      font-weight: bold;
-    }
-
-    .sidebar a:hover {
-      text-decoration: underline;
-    }
+footer a:hover {
+  text-decoration: underline;
+}
