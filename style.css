@@ -30,6 +30,11 @@ p {
   margin-bottom: 15px;
 }
 
+/* Tables */
+table, th, td {
+  border: 1px solid black;
+}
+
 /* Lists */
 ul {
   margin-left: 20px;
