@@ -1,4 +1,4 @@
-/* --- Body & basic text --- */
+/* --- Body & text --- */
 body {
   font-family: Tahoma, sans-serif;
   background: #121212;
@@ -8,16 +8,16 @@ body {
   padding: 0;
 }
 
-/* --- Fixed sidebar --- */
+/* --- Sidebar --- */
 .sidebar {
-  position: fixed;   /* fixes it in place */
+  position: fixed;       /* stays fixed on the side */
   top: 0;
   left: 0;
-  width: 220px;      /* adjust as needed */
-  height: 100vh;     /* full viewport height */
+  width: 220px;          /* sidebar width */
+  height: 100vh;         /* full viewport height */
   background-color: #1e1e1e;
   padding: 20px;
-  overflow-y: auto;  /* scroll inside if links overflow */
+  overflow-y: auto;      /* scroll if needed */
 }
 
 .sidebar a {
@@ -34,14 +34,23 @@ body {
 
 /* --- Main content --- */
 main.container {
-  margin-left: 240px; /* width of sidebar + extra padding */
+  margin-left: 240px;    /* sidebar width + padding */
   padding: 20px;
 }
 
-/* --- Headings and paragraphs --- */
-h1, h2, h3 { margin: 20px 0 10px; }
-p, ul { margin-bottom: 15px; }
-ul { margin-left: 20px; }
+/* --- Headings --- */
+h1, h2, h3 {
+  margin: 20px 0 10px;
+}
+
+/* --- Paragraphs & lists --- */
+p, ul {
+  margin-bottom: 15px;
+}
+
+ul {
+  margin-left: 20px;
+}
 
 /* --- Footer --- */
 footer {
@@ -59,7 +68,7 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Optional: home hero section */
+/* --- Optional: home hero section --- */
 .hero {
   margin-bottom: 30px;
   padding: 20px;
