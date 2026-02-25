@@ -52,9 +52,11 @@ body {
 }
 
 /* --- Main content --- */
-main.container {
-  margin-left: 220px;    /* sidebar width + padding */
-  padding: 60px 80px 10px 40px;
+.main {
+    margin-left: 220px;      
+    margin-top: 60px;        /* leave space for header */
+    padding: 20px 40px 20px 20px;
+    min-height: calc(100vh - 60px);
 }
 
 /* --- Headings --- */
