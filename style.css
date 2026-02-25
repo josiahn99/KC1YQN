@@ -1,9 +1,13 @@
 /* ----------------------------
    Global Styles
    ---------------------------- */
+
+{
+  font-family: 'Tahoma', sans-serif;
+}
+
 body {
     margin: 0;
-    font-family: 'Tahoma', monospace;
     font-size: 18px;
     line-height: 1.6;
     background-color: var(--bg);
