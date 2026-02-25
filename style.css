@@ -57,3 +57,34 @@ footer {
   font-size: 0.9em;
   color: #aaa;
 }
+
+/* --- Wrapper flex container --- */
+    .site-wrapper {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* --- Sidebar --- */
+    .sidebar {
+      width: 220px;
+      background-color: #1e1e1e;
+      padding: 20px;
+      flex-shrink: 0;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      overflow-y: auto;
+    }
+
+    .sidebar a {
+      display: block;
+      color: #90d5ff;
+      text-decoration: none;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
