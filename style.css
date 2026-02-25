@@ -45,7 +45,6 @@ body {
     position: fixed;          
     top: 60px;               /* below header */
     left: 0;
-    height: calc(100vh - 60px);
     background-color: #1e1e1e;
     padding: 20px;
     overflow-y: auto;
@@ -58,8 +57,7 @@ body {
   text-decoration: none;
   margin-bottom: 15px;
   font-weight: bold;
-  height: calc(100vh - 60px)
- }
+}
 
 .sidebar a:hover {
   text-decoration: underline;
