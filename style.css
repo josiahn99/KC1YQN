@@ -21,14 +21,13 @@ body {
 
 /* --- Sidebar --- */
 .sidebar {
-  width: 220px;
-  background-color: #1e1e1e;
-  padding: 20px;
-  flex-shrink: 0;
-  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
+  width: 220px;          /* sidebar width */
+  height: 100vh;         /* full viewport height */
+  background-color: #1e1e1e;
+  padding: 20px;
   overflow-y: auto;
 }
 
@@ -46,9 +45,8 @@ body {
 
 /* --- Main content --- */
 main.container {
-  flex-grow: 1;
+  margin-left: 240px;    /* sidebar width + some padding */
   padding: 20px;
-  margin-left: 240px; /* width + padding of sidebar */
 }
 
 /* --- Headings --- */
