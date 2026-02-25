@@ -17,7 +17,7 @@ body {
     background-color: #1a1a1a;
     color: #90d5ff;
     padding: 10px 20px;
-    text-align: center;
+    text-align: left;
     box-shadow: 0 2px 5px rgba(0,0,0,0.5);
     position: fixed; /* stays on top */
     top: 0;
