@@ -1,18 +1,4 @@
 /* ----------------------------
-   Theme Variables
-   ---------------------------- */
-:root {
-    --bg: #121212;           /* Dark background */
-    --fg: #e0e0e0;           /* Light foreground */
-    --panel: #1e1e1e;        /* Panels / sidebar */
-    --panel-alt: #181818;    /* Alternate panel background */
-    --border: #333;          /* Table borders */
-    --accent: #90d5ff;       /* Light blue accent */
-    --accent-soft: rgba(144, 213, 255, 0.5);
-    --link: #58A6FF;
-}
-
-/* ----------------------------
    Global Styles
    ---------------------------- */
 body {
