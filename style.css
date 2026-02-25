@@ -66,7 +66,7 @@ body {
 /* --- Main content --- */
 /* Main content */
 .main {
-    margin-left: 220px;      /* space for sidebar */
+    margin-left: 320px;      /* space for sidebar */
     margin-top: 60px;        /* space for header */
     padding: 20px 40px 20px 20px; /* top, right, bottom, left */
     min-height: calc(100vh - 60px);
