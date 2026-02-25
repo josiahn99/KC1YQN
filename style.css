@@ -8,6 +8,25 @@ body {
   padding: 0;
 }
 
+/* ----------------------------
+   Top Header
+---------------------------- */
+.top-header {
+    width: 100%;
+    background-color: #121212;
+    color: #90d5ff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+/* Optional: smaller text for description */
+.top-header p {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: #c0c0c0;
+}
+
 /* --- Sidebar --- */
 .sidebar {
   position: fixed;       /* stays fixed on the side */
