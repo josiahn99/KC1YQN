@@ -6,29 +6,32 @@
   <title>{{ page.title }}</title>
   <link rel="stylesheet" href="/style.css">
 </head>
-<header class="top-header">
 <body>
-  <h1>KC1YQN</h1>
-</header>
-  <div class="container">
-  <!-- Sidebar navigation (fixed) -->
-  <nav class="sidebar">
-        <a href="/">Home</a>
-    <a href="/about.html">About</a>
-    <a href="/radio.html">Radio</a>
-    <a href="/notes.html">Notes</a>
-    <a href="/links.html">Links</a>
-    <a href="/astronomy.html">Astronomy</a>
-    contact @ 
-      <a href="https://www.qrz.com/db/KC1YQN">QRZ.com</a>
-   
-  </nav>
 
-  <!-- Main content -->
-  <main class="main">
-    {{ content }}
-  </main>
+  <!-- Top header -->
+  <header class="top-header">
+    <h1>KC1YQN</h1>
+  </header>
+
+  <!-- Main container -->
+  <div class="container">
+    <!-- Sidebar navigation (fixed) -->
+    <nav class="sidebar">
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/radio.html">Radio</a>
+      <a href="/notes.html">Notes</a>
+      <a href="/links.html">Links</a>
+      <a href="/astronomy.html">Astronomy</a>
+      <p>contact @ <a href="https://www.qrz.com/db/KC1YQN">QRZ.com</a></p>
+    </nav>
+
+    <!-- Main content -->
+    <main class="main">
+      {{ content }}
+    </main>
   </div>
+
   <!-- Footer -->
   <footer>
     <hr>
