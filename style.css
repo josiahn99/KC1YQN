@@ -43,7 +43,7 @@ body {
 .sidebar {
     width: 200px;
     position: fixed;          
-    top: 100px;               /* below header */
+    top: 60px;               /* below header */
     left: 0;
     height: calc(100vh - 60px);
     background-color: #1e1e1e;
@@ -57,6 +57,8 @@ body {
   text-decoration: none;
   margin-bottom: 15px;
   font-weight: bold;
+  height: calc(100vh - 60px)
+  z-index: 900; /* below header */
 }
 
 .sidebar a:hover {
@@ -66,7 +68,7 @@ body {
 /* --- Main content --- */
 /* Main content */
 .main {
-    margin-left: 320px;      /* space for sidebar */
+    margin-left: 2000px;      /* space for sidebar */
     margin-top: 60px;        /* space for header */
     padding: 20px 40px 20px 20px; /* top, right, bottom, left */
     min-height: calc(100vh - 60px);
