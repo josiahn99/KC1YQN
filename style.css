@@ -8,6 +8,11 @@ body {
   padding: 0;
 }
 
+.container {
+    display: flex;           /* puts sidebar and main side by side */
+    min-height: 100vh;       /* optional: full height */
+}
+
 /* --- Sidebar --- */
 .sidebar {
   position: fixed;       /* stays fixed on the side */
