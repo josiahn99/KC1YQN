@@ -8,6 +8,13 @@ body {
   padding: 0;
 }
 
+/* Header logo */
+.header-logo {
+  height: 50px;         /* adjust to fit header */
+  width: auto;
+  display: block;
+}
+
 /* ----------------------------
    Top Header
 ---------------------------- */
