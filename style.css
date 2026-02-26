@@ -11,7 +11,6 @@ body {
 /* ----------------------------
    Top Header
 ---------------------------- */
-/* Header layout */
 .top-header {
   display: flex;
   align-items: center;
@@ -19,13 +18,17 @@ body {
   padding: 0 20px;
   height: 60px;
   background: #1a1a1a;
-
   position: sticky;
   top: 0;
   z-index: 1000;
 }
+
+.top-header h1 a {
+  color: #e0e0e0;
+  text-decoration: none;
+}
+
 /* Hide checkbox */
-/* Hide checkbox completely */
 .menu-toggle {
   position: absolute;
   opacity: 0;
@@ -38,17 +41,13 @@ body {
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
+  z-index: 2000;
 }
 
 .hamburger span {
   width: 25px;
   height: 3px;
   background: #e0e0e0;
-}
-
-.top-header p {
-    font-size: 0.9rem;
-    margin-top: 4px;
 }
 
 /* ----------------------------
@@ -75,7 +74,6 @@ body {
 .sidebar a {
   display: block;
   text-decoration: none;
-  margin-bottom: 5px;
   font-weight: bold;
 }
 
@@ -83,22 +81,22 @@ body {
   text-decoration: underline;
 }
 
-/* --- Main content --- */
 /* Main content */
 .main {
   flex: 1;
   padding: 40px;
 }
 
-/* --- Headings --- */
+/* Headings */
 h1, h2, h3 {
   margin: 0px 0 20px;
 }
 
 a {
-    color: #22d3ee;
+  color: #22d3ee;
 }
-/* --- Paragraphs & lists --- */
+
+/* Paragraphs & lists */
 p, ul {
   margin-bottom: 15px;
 }
@@ -107,7 +105,7 @@ ul {
   margin-left: 20px;
 }
 
-/* --- Footer --- */
+/* Footer */
 footer {
   margin-top: 40px;
   font-size: 0.9em;
@@ -122,26 +120,29 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Mobile */
+/* ----------------------------
+   Mobile Styles
+---------------------------- */
 @media (max-width: 900px) {
+  .hamburger {
+    display: flex;
+  }
 
   .container {
     flex-direction: column;
   }
 
   .sidebar {
-    display: none;
+    display: none; /* Hidden by default on mobile */
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
   }
 
-  /* Must match sibling structure */
+  /* Show sidebar when checkbox is checked */
   .menu-toggle:checked ~ .container .sidebar {
     display: flex;
     flex-direction: column;
-  }
-  
-  .hamburger {
-    display: flex;
-    z-index: 2000;
-    position: relative;
   }
 }
