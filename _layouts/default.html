@@ -3,26 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>{{ page.title }} | KC1YQN</title>
-
-  <!-- Stylesheet -->
   <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
 </head>
-
 <body>
 
-  <!-- ===================== -->
-  <!-- Header -->
-  <!-- ===================== -->
+  <!-- Top header -->
   <header class="top-header">
-    <h1>
-      <a href="{{ '/' | relative_url }}">KC1YQN</a>
-    </h1>
+    <h1><a href="{{ '/' | relative_url }}">KC1YQN</a></h1>
 
-    <!-- Mobile Toggle -->
+    <!-- Hidden checkbox for mobile toggle -->
     <input type="checkbox" id="menu-toggle" class="menu-toggle">
 
+    <!-- Hamburger -->
     <label for="menu-toggle" class="hamburger">
       <span></span>
       <span></span>
@@ -30,12 +23,10 @@
     </label>
   </header>
 
-  <!-- ===================== -->
-  <!-- Layout Container -->
-  <!-- ===================== -->
+  <!-- Layout container -->
   <div class="container">
 
-    <!-- Sidebar Navigation -->
+    <!-- Sidebar -->
     <nav class="sidebar">
       <a href="{{ '/' | relative_url }}">Home</a>
       <a href="{{ '/radio/' | relative_url }}">Radio</a>
@@ -44,23 +35,19 @@
       <a href="{{ '/status/' | relative_url }}">Status</a>
     </nav>
 
-    <!-- Main Content -->
+    <!-- Main content -->
     <main class="main">
       {{ content }}
     </main>
 
   </div>
 
-  <!-- ===================== -->
   <!-- Footer -->
-  <!-- ===================== -->
   <footer>
     <hr>
     <p>
-      KC1YQN • FN42 • Contact @ 
-      <a href="https://www.qrz.com/db/KC1YQN" target="_blank" rel="noopener">
-        QRZ.com
-      </a>
+      KC1YQN • FN42 • contact @ 
+      <a href="https://www.qrz.com/db/KC1YQN" target="_blank" rel="noopener">QRZ.com</a>
     </p>
   </footer>
 
