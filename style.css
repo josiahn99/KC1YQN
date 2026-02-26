@@ -71,6 +71,12 @@ body {
   .menu-toggle:checked + .hamburger + .nav {
     display: flex;
   }
+  
+  .container {
+    margin: 20px auto;
+    padding: 0 15px;
+  }
+
 }
 .top-header p {
     font-size: 0.9rem;
