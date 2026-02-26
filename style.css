@@ -37,7 +37,7 @@ body {
 
 /* Hamburger */
 .hamburger {
-  display: none; /* show only in mobile */
+  display: none; /* show only on mobile */
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
@@ -124,6 +124,7 @@ footer a:hover {
    Mobile Styles
 ---------------------------- */
 @media (max-width: 900px) {
+
   /* Show hamburger */
   .hamburger {
     display: flex;
