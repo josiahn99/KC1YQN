@@ -1,13 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{{ page.title }} | KC1YQN</title>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+</head>
+
 <body>
 
-  <!-- Top header -->
+  <!-- ===================== -->
+  <!-- Header -->
+  <!-- ===================== -->
   <header class="top-header">
-    <h1>KC1YQN</h1>
+    <h1>
+      <a href="{{ '/' | relative_url }}">KC1YQN</a>
+    </h1>
 
-    <!-- Hidden checkbox -->
+    <!-- Mobile Toggle -->
     <input type="checkbox" id="menu-toggle" class="menu-toggle">
 
-    <!-- Hamburger -->
     <label for="menu-toggle" class="hamburger">
       <span></span>
       <span></span>
@@ -15,31 +30,39 @@
     </label>
   </header>
 
+  <!-- ===================== -->
+  <!-- Layout Container -->
+  <!-- ===================== -->
   <div class="container">
 
-    <!-- Sidebar -->
+    <!-- Sidebar Navigation -->
     <nav class="sidebar">
-      <a href="index.html">Home</a>
-      <a href="radio.html">Radio</a>
-      <a href="projects.html">Projects</a>
-      <a href="notes.html">Notes</a>
-      <a href="status.html">Status</a>
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <a href="{{ '/radio/' | relative_url }}">Radio</a>
+      <a href="{{ '/projects/' | relative_url }}">Projects</a>
+      <a href="{{ '/notes/' | relative_url }}">Notes</a>
+      <a href="{{ '/status/' | relative_url }}">Status</a>
     </nav>
 
-    <!-- Main content -->
+    <!-- Main Content -->
     <main class="main">
       {{ content }}
     </main>
 
   </div>
 
+  <!-- ===================== -->
   <!-- Footer -->
+  <!-- ===================== -->
   <footer>
     <hr>
     <p>
-      KC1YQN • FN42 • contact @ 
-      <a href="https://www.qrz.com/db/KC1YQN">QRZ.com</a>
+      KC1YQN • FN42 • Contact @ 
+      <a href="https://www.qrz.com/db/KC1YQN" target="_blank" rel="noopener">
+        QRZ.com
+      </a>
     </p>
   </footer>
 
 </body>
+</html>
