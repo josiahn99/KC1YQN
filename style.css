@@ -136,9 +136,8 @@ footer a:hover {
   .menu-toggle:checked ~ .container .sidebar {
     display: flex;
   }
-{
+  
   .hamburger {
     display: flex;
   }
-}
 }
