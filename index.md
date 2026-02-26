@@ -6,12 +6,12 @@ title: Home
 
 This site serves to document my progress in learning all things amateur radio, with some Python and Raspberry Pi experimenting on the side.  
 
-So far I have a DMR hotspot up and running.
+So far, my primary project has been setting up a [DMR hotspot](./assembly/).
 
-I'm also figuring out where I want to go with this and figuring out my goals and learning plan.
+I'm also actively thinking through [my goals and a learning plan for achieving them](./about/).
 
-Also some tips for any new hams using an Anytone-878 as their first radio.
+Finally, I've put together some tips for new hams with an [Anytone-878](./radio/).
 
-More to come soon. Thanks for stopping by.
+And more for me to just record my own thoughts and progress, but I have [astronomy notes](./astronomy/) and [radio notes](./notes/).
 
-Site hosted by Gith Hub Pages.
+More coming soon. Thanks for stopping by. 73
