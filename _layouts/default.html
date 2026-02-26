@@ -8,19 +8,29 @@
 </head>
 <body>
 
-  <!-- Top header -->
- <header class="top-header">
-  <h1><a href="{{ '/' | relative_url }}">KC1YQN</a></h1>
+  <!-- ===================== -->
+  <!-- Header + Mobile Toggle -->
+  <!-- ===================== -->
+  <header class="top-header">
+    <h1><a href="{{ '/' | relative_url }}">KC1YQN</a></h1>
 
-  <input type="checkbox" id="menu-toggle" class="menu-toggle">
-  <label for="menu-toggle" class="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </label>
+    <!-- Hidden checkbox for mobile toggle -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
 
-  <!-- Sidebar moved inside header for mobile toggle -->
+    <!-- Hamburger -->
+    <label for="menu-toggle" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </header>
+
+  <!-- ===================== -->
+  <!-- Layout container -->
+  <!-- ===================== -->
   <div class="container">
+
+    <!-- Sidebar -->
     <nav class="sidebar">
       <a href="{{ '/' | relative_url }}">Home</a>
       <a href="{{ '/radio/' | relative_url }}">Radio</a>
@@ -29,18 +39,20 @@
       <a href="{{ '/status/' | relative_url }}">Status</a>
     </nav>
 
+    <!-- Main content -->
     <main class="main">
       {{ content }}
     </main>
+
   </div>
-</header>
 
-
+  <!-- ===================== -->
   <!-- Footer -->
+  <!-- ===================== -->
   <footer>
     <hr>
     <p>
-      KC1YQN • FN42 • contact @ 
+      KC1YQN • FN42 • Contact @ 
       <a href="https://www.qrz.com/db/KC1YQN" target="_blank" rel="noopener">QRZ.com</a>
     </p>
   </footer>
