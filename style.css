@@ -10,7 +10,7 @@ body {
 
 /* Header logo */
 .header-logo {
-  height: 100px;         /* adjust to fit header */
+  height: 90px;         /* adjust to fit header */
   width: auto;
   display: block;
 }
@@ -23,8 +23,8 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
-  height: 120px;
-  background: #0A0A0D;
+  height: 90px;
+  background: #030303;
   position: sticky;
   top: 0;
   z-index: 1000;
