@@ -11,18 +11,76 @@ body {
 /* ----------------------------
    Top Header
 ---------------------------- */
+/* Header layout */
 .top-header {
-    height: 60px;
-    width: 100%;
-    background-color: #1a1a1a;
-    color: #90d5ff;
-    padding: 10px 20px;
-    text-align: left;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-    position: fixed; /* stays on top */
-    top: 0;
-    left: 0;
-    z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 60px;
+  background: #1a1a1a;
+  position: relative;
+}
+
+/* Hide checkbox */
+.menu-toggle {
+  display: none;
+}
+
+/* Hamburger styling */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #e0e0e0;
+  transition: 0.3s;
+}
+
+/* Nav default (desktop) */
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  color: #e0e0e0;
+  text-decoration: none;
+}
+
+/* ----------------------------
+   Mobile Styles
+---------------------------- */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #1e1e1e;
+    width: 200px;
+    flex-direction: column;
+    padding: 15px;
+    display: none;
+  }
+
+  .nav a {
+    padding: 10px 0;
+  }
+
+  /* Toggle menu when checked */
+  .menu-toggle:checked + .hamburger + .nav {
+    display: flex;
+  }
 }
 
 .top-header p {
