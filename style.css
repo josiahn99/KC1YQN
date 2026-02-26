@@ -46,13 +46,6 @@ body {
   background: #e0e0e0;
 }
 
-/* Desktop nav */
-.nav {
-  display: flex;
-  gap: 20px;
-}
-
-
 .top-header p {
     font-size: 0.9rem;
     margin-top: 4px;
@@ -74,6 +67,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  height: calc(100vh - 60px);
+  position: sticky;
+  top: 60px;
 }
 
 .sidebar a {
