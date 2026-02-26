@@ -124,25 +124,16 @@ footer a:hover {
    Mobile Styles
 ---------------------------- */
 @media (max-width: 900px) {
+  .sidebar {
+    display: none;
+  }
+
+  .menu-toggle:checked + .container .sidebar {
+    display: flex;
+    flex-direction: column;
+  }
+
   .hamburger {
     display: flex;
-  }
-
-  .container {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    display: none; /* Hidden by default on mobile */
-    width: 100%;
-    height: auto;
-    position: relative;
-    top: 0;
-  }
-
-  /* Show sidebar when checkbox is checked */
-  .menu-toggle:checked ~ .container .sidebar {
-    display: flex;
-    flex-direction: column;
   }
 }
