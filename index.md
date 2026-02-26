@@ -2,7 +2,7 @@
 layout: default
 title: Home
 ---
-##Welcome
+# Welcome
 
 This site serves to document my progress in learning all things amateur radio, with some Python and Raspberry Pi experimenting on the side.  
 
