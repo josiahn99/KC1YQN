@@ -77,6 +77,13 @@ body {
     padding: 0 15px;
   }
   
+  .main {
+    margin-left: 20px;      /* space for sidebar */
+    margin-top: 60px;        /* space for header */
+    padding: 20px 40px 20px 20px; /* top, right, bottom, left */
+    min-height: calc(100vh - 60px);
+    }
+  
   .sidebar {
     width: 0px;
     position: fixed;          
