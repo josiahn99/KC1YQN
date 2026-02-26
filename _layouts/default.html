@@ -1,41 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="/style.css">
-</head>
 <body>
 
   <!-- Top header -->
   <header class="top-header">
-  <h1>KC1YQN</h1>
+    <h1>KC1YQN</h1>
 
-  <!-- Hidden checkbox -->
-  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <!-- Hidden checkbox -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
 
-  <!-- Hamburger label -->
-  <label for="menu-toggle" class="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </label>
+    <!-- Hamburger -->
+    <label for="menu-toggle" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </header>
 
-  <!-- Navigation -->
-  <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="radio.html">Radio</a>
-    <a href="projects.html">Projects</a>
-    <a href="notes.html">Notes</a>
-    <a href="status.html">Status</a>
-  </nav>
-</header>
+  <div class="container">
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <a href="index.html">Home</a>
+      <a href="radio.html">Radio</a>
+      <a href="projects.html">Projects</a>
+      <a href="notes.html">Notes</a>
+      <a href="status.html">Status</a>
+    </nav>
 
     <!-- Main content -->
     <main class="main">
       {{ content }}
     </main>
+
   </div>
 
   <!-- Footer -->
@@ -48,4 +43,3 @@
   </footer>
 
 </body>
-</html>
