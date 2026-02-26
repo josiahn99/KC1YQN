@@ -133,8 +133,10 @@ footer a:hover {
     display: none;
   }
 
+  /* Must match sibling structure */
   .menu-toggle:checked ~ .container .sidebar {
     display: flex;
+    flex-direction: column;
   }
   
   .hamburger {
