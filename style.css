@@ -163,14 +163,7 @@ footer a:hover {
     }
   
   .sidebar {
-    width: 0px;
-    position: fixed;          
-    top: 60px;               /* below header */
-    left: 0;
-    background-color: #1e1e1e;
-    padding: 20px;
-    overflow-y: auto;
-    z-index: 500;
+    display: none
     }
 
 }
