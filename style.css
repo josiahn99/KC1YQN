@@ -95,7 +95,7 @@ body {
     margin-left: 200px;      /* space for sidebar */
     margin-top: 60px;        /* space for header */
     padding: 20px 40px 20px 80px; /* top, right, bottom, left */
-    min-height: calc(100vh - 60px);
+    /*min-height: calc(100vh - 60px);
     }
 
 /* --- Headings --- */
@@ -162,7 +162,7 @@ footer a:hover {
     margin-left: 20px;      /* space for sidebar */
     margin-top: 60px;        /* space for header */
     padding: 20px 40px 20px 20px; /* top, right, bottom, left */
-    min-height: calc(100vh - 100px);
+    /*min-height: calc(100vh - 100px);
     }
   
   .sidebar {
