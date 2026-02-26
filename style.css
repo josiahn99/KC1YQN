@@ -76,6 +76,17 @@ body {
     margin: 20px auto;
     padding: 0 15px;
   }
+  
+  .sidebar {
+    width: 0px;
+    position: fixed;          
+    top: 60px;               /* below header */
+    left: 0;
+    background-color: #1e1e1e;
+    padding: 20px;
+    overflow-y: auto;
+    z-index: 500;
+    }
 
 }
 .top-header p {
