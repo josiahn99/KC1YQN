@@ -10,9 +10,15 @@ title: about
       <th>Time (UTC)</th>
       <th>Callsign</th>
       <th>Talkgroup / Slot Info</th>
+
+      {% for entry in site.data.pistar %}
+  <tr>
+    <td>{{ entry.time }}</td>
+    <td>{{ entry.callsign }}</td>
+    <td>{{ entry.tg_slot }}</td>
+  </tr>
+{% endfor %}
     </tr>
   </thead>
   <tbody id="tableBody"></tbody>
 </table>
-
-<script src="status.js"></script>
