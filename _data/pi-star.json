@@ -1,1 +1,1 @@
-{"entries": [{"time": "2026-08-23 08:33:00", "callsign": "KC1YQN", "tg_slot": "6"}], "system": {"hostname": "pi-star", "uptime": "up 5 weeks, 6 days, 17 hours, 57 minutes", "cpu_load": 0.08, "temperature": "temp=53.2'C", "memory": "142/972 MB", "disk": "4.4G/119G (4%)"}}
+{"entries": [{"time": "2026-08-23 08:33:00", "callsign": "KC1YQN", "tg_slot": "6"}], "system": {"hostname": "pi-star", "uptime": "up 5 weeks, 6 days, 19 hours, 27 minutes", "cpu_load": 0.46, "temperature": "temp=54.2'C", "memory": "161/972 MB", "disk": "4.4G/119G (4%)"}}
